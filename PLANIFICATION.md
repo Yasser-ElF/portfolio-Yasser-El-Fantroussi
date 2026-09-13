@@ -141,7 +141,7 @@ Le professeur nous a demandé de créer une installation immersive ou une prése
 J’ai créé, avec mon équipe, un film qui représente la solitude et les troubles émotionnels qu’une personne peut vivre. Le film montre comment certains traits de personnalité peuvent progressivement disparaître et être remplacés par d’autres, ce qui peut créer des comportements dangereux chez certaines personnes vivant avec des troubles émotionnels ou psychologiques.
 
 **Lien vers la documentation de votre projet :**
-À compléter.
+[Lien.](https://youtu.be/yRWwUVZQnKA)
 
 ---
 
