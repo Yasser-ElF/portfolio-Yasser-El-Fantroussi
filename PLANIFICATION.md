@@ -179,5 +179,12 @@ Le professeur nous a demandé de créer une campagne de publicité Web en plusie
 **Description du projet :**
 J’ai créé une publicité Web sur le thème du Ramadan pour un restaurant musulman, avec une promotion de 50 % de rabais sur ses plats. La publicité présente une photo d’un plat, le site Web et le numéro de téléphone du restaurant ainsi qu’un bouton « En savoir plus » qui permet au client d’accéder à la page en ligne du restaurant.
 
-**Lien vers la documentation du projet :**
-À compléter.
+**Documentation du projet :**
+![Bannière Web petite](media/bannier%20web%20peti.png)
+
+![Bannière Web](media/banniere%20web.png)
+
+![Image 2](media/image%202.png)
+
+![Instagram](media/instagrame.png)
+
