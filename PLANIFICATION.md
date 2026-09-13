@@ -1,5 +1,4 @@
 # Planification de mon portfolio
-
 ## Compétences
 
 - Réaliser et tourner des vidéos
