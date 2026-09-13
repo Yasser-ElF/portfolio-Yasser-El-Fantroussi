@@ -181,8 +181,8 @@ J’ai créé une publicité Web sur le thème du Ramadan pour un restaurant mus
 
 **Documentation du projet :**
 
-![Bannière Web petite](media/bannier_web_peti.png)
+![Bannière Web petite](medias/bannier_web_peti.png)
 
-![Bannière Web](media/banniere_web.png)
+![Bannière Web](medias/banniere_web.png)
 
-![Instagram](media/instagrame.png)
+![Instagram](medias/instagrame.png)
