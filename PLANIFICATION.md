@@ -95,7 +95,7 @@ Le professeur nous a demandé de créer une performance audiovisuelle créative 
 J’ai créé une performance audiovisuelle qui évoque la thalassophobie, en mettant l’accent sur un environnement qui rappelle les profondeurs de l’océan. J’ai créé une ambiance sonore sous-marine avec des sons de créatures et de poissons afin de créer un sentiment de peur, de malaise et d’inconfort.
 
 **Lien vers la documentation du projet :**
-[la chasse lien youtube](https://youtu.be/zx5qwowoRbc)
+[la chasse lien youtube](https://youtu.be/zx5qwowoRbc) (ajout de qlq images )
 ---
 
 ## Projet 2 : Scène réactive
