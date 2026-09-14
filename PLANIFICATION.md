@@ -265,10 +265,8 @@ Le résultat final est une campagne publicitaire sur le thème du Ramadan, avec 
 
 Ce projet est le résultat de mes recherches, de mes inspirations, de ma créativité et des conseils de mon professeur.
 <p>
+  <img src="medias/bannier_web_peti.png" width="250">
+  <img src="medias/banniere_web.png" width="250">
   <img src="medias/instagrame.png" width="250">
 </p>
 
-
-Ce projet est le résultat de mes recherches, de mes inspirations, de ma créativité et des conseils de mon professeur.
-
-Image à insérer : les trois publicités finales.
