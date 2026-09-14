@@ -187,70 +187,89 @@ J’ai créé une publicité Web sur le thème du Ramadan pour un restaurant mus
   <img src="medias/instagrame.png" width="250">
 </p>
 
-Processus de création du projet
-Étape 1 — Création du moodboard
+# Processus de création du projet
+
+## Étape 1 — Création du moodboard
 Pour commencer, j’ai créé un moodboard pour définir l’ambiance générale de mon projet. J’ai rassemblé plusieurs images en lien avec le Ramadan, la nourriture et la publicité.
 
 J’ai aussi commencé à réfléchir aux couleurs, aux styles, aux formes et aux typographies que je pourrais utiliser. Cette étape m’a aidé à avoir une première idée de la direction que je voulais prendre.
 
-Image à insérer : mon moodboard avec les différentes photos, couleurs et références.
+> **Image à insérer :** mon moodboard avec les différentes photos, couleurs et références.
 
-Étape 2 — Création de la planche d’inspiration
+---
+
+## Étape 2 — Création de la planche d’inspiration
 Après le moodboard, j’ai créé une planche d’inspiration plus précise. Elle m’a servi de guide pour commencer mon projet.
 
 J’y ai ajouté les polices, les couleurs, le style graphique, le nom du restaurant, des exemples de photos, des exemples de publicités et les éléments décoratifs que je voulais utiliser.
 
 Cette étape m’a permis de mieux définir le style final de ma publicité.
 
-Image à insérer : ma planche d’inspiration complète.
+> **Image à insérer :** ma planche d’inspiration complète.
 
-Étape 3 — Recherche de publicités similaires
+---
+
+## Étape 3 — Recherche de publicités similaires
 Avant de commencer ma publicité, j’ai regardé plusieurs publicités sur la nourriture et les promotions pour trouver de l’inspiration.
 
 J’ai observé comment les autres publicités utilisent les photos de nourriture, les gros textes, les couleurs, les rabais et les boutons pour attirer l’attention.
 
 Ces recherches m’ont donné des idées pour présenter mon offre de 50 % de rabais, tout en créant mon propre design.
 
-Image à insérer : quelques exemples de publicités qui m’ont inspiré.
+> **Image à insérer :** quelques exemples de publicités qui m’ont inspiré.
 
-Étape 4 — Première création dans Figma
+---
+
+## Étape 4 — Première création dans Figma
 Après mes recherches, j’ai commencé à créer ma publicité dans Figma. Je me suis basé sur mon moodboard, ma planche d’inspiration et les idées que j’avais trouvées.
 
 J’ai commencé à placer les différents éléments comme la photo du plat, le texte de la promotion, le nom du restaurant, les informations, le bouton « En savoir plus » et les décorations.
 
 J’ai ensuite utilisé ma créativité pour créer une composition qui correspondait à mon idée du projet.
 
-Image à insérer : ma première version dans Figma.
+> **Image à insérer :** ma première version dans Figma.
 
-Étape 5 — Développement de la composition
+---
+
+## Étape 5 — Développement de la composition
 Après ma première version, j’ai essayé différentes façons de placer les éléments pour trouver une composition qui fonctionnait bien.
 
 J’ai changé la taille des textes, la position des images, les couleurs et les espaces. Je voulais garder un design simple, mais aussi assez intéressant pour attirer l’attention sur la promotion.
 
 J’ai aussi pris en compte les commentaires et les conseils de mon professeur pour améliorer mon design.
 
-Image à insérer : différentes versions ou essais réalisés dans Figma.
+> **Image à insérer :** différentes versions ou essais réalisés dans Figma.
 
-Étape 6 — Adaptation aux trois formats
+---
+
+## Étape 6 — Adaptation aux trois formats
 Une fois mon design principal terminé, je l’ai adapté aux trois formats demandés : un post Instagram et deux bannières Web.
 
 J’ai gardé les mêmes couleurs, le même style et les mêmes éléments pour que les trois publicités restent cohérentes. J’ai cependant changé leur disposition pour qu’elles fonctionnent bien dans chaque format.
 
-Image à insérer : les trois formats dans Figma.
+> **Image à insérer :** les trois formats dans Figma.
 
-Étape 7 — Corrections avec les commentaires du professeur
+---
+
+## Étape 7 — Corrections avec les commentaires du professeur
 J’ai ensuite montré mon travail à mon professeur pour avoir des commentaires.
 
 Grâce à ses conseils, j’ai fait plusieurs corrections au niveau de l’équilibre, de la lisibilité, de la hiérarchie des informations et du placement des éléments.
 
 Cela m’a permis d’améliorer mon projet et de voir certains détails que je pouvais encore modifier.
 
-Image à insérer : une comparaison entre une version avant et après les corrections.
+> **Image à insérer :** une comparaison entre une version avant et après les corrections.
 
-Étape 8 — Version finale
+---
+
+## Étape 8 — Version finale
 Après les dernières corrections, j’ai finalisé les trois publicités dans Figma. J’ai vérifié que toutes les informations importantes étaient présentes et que les trois formats avaient le même style.
 
 Le résultat final est une campagne publicitaire sur le thème du Ramadan, avec une promotion de 50 % de rabais sur le menu du restaurant.
+
+Ce projet est le résultat de mes recherches, de mes inspirations, de ma créativité et des conseils de mon professeur.
+
+> **Image à insérer :** les trois publicités finales.
 
 Ce projet est le résultat de mes recherches, de mes inspirations, de ma créativité et des conseils de mon professeur.
 
