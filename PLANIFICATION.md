@@ -1,7 +1,7 @@
 # Planification de mon portfolio
 # Choix techniques
 
-## 1. Gestion des données 🗂️
+## 1. Gestion des données 
 
 * **Choix :** Fichier JSON local
 * **Récupération :** `fetch()` avec JavaScript
@@ -10,7 +10,7 @@ Je vais utiliser un fichier `projets.json` pour garder les informations de mes p
 
 ---
 
-## 2. Animations 🎬
+## 2. Animations 
 
 * **Choix :** CSS pur
 * **Éléments :** Cartes de projets et éléments de la page
@@ -20,7 +20,7 @@ Je vais utiliser des animations CSS simples. Par exemple, les cartes peuvent bou
 
 ---
 
-## 3. Structure de navigation 🧭
+## 3. Structure de navigation 
 
 * **Choix :** One-pager avec pop-up
 
@@ -28,7 +28,7 @@ Mon portfolio sera sur une seule page. Les projets seront affichés avec des car
 
 ---
 
-## 4. Hébergement 🌐
+## 4. Hébergement 
 
 * **Choix :** GitHub Pages
 
