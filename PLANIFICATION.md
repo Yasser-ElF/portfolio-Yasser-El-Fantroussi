@@ -22,9 +22,9 @@ Je vais utiliser des animations CSS simples. Par exemple, les cartes peuvent bou
 
 ## 3. Structure de navigation 
 
-* **Choix :** One-pager avec pop-up
+* **Choix :** One-pager 
 
-Mon portfolio sera sur une seule page. Les projets seront affichés avec des cartes. Quand on clique sur un projet, un pop-up montrera plus d’informations.
+Mon portfolio sera sur une seule page. Les projets seront affichés avec des cartes.
 
 ---
 
