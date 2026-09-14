@@ -214,8 +214,10 @@ J’ai observé comment les autres publicités utilisent les photos de nourritur
 
 Ces recherches m’ont donné des idées pour présenter mon offre de 50 % de rabais, tout en créant mon propre design.
 
-![Publicité 1](medias/pub1.png)
-![Publicité 2](medias/pub2.png)
+<p>
+  <img src="medias/pub2.png" width="250">
+  <img src="medias/pub1.png" width="250">
+</p>
 
 
 ## Étape 4 : Première création dans Figma
