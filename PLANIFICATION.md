@@ -258,7 +258,6 @@ Grâce à ses conseils, j’ai fait plusieurs corrections au niveau de l’équi
 
 Cela m’a permis d’améliorer mon projet et de voir certains détails que je pouvais encore modifier.
 
-> **Image à insérer :** une comparaison entre une version avant et après les corrections.
 
 ---
 
