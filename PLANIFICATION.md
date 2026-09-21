@@ -62,7 +62,7 @@ Je vais utiliser GitHub Pages parce que c’est gratuit et facile à utiliser av
 ## Projet 1 : La Chasse
 
 **Nom du projet :**
-La Chasse
+La Solitude
 
 **Mention académique ou personnel :**
 Projet académique
@@ -92,7 +92,7 @@ Une performance audiovisuelle diffusée par un projecteur et des haut-parleurs.
 Le professeur nous a demandé de créer une performance audiovisuelle créative comprenant un minimum de quatre scènes, dont une scène utilisant notre animation 3D réalisée sans TouchDesigner. La performance devait aussi intégrer une ambiance sonore et des effets sonores créés et gérés avec Max.
 
 **Description du projet :**
-J’ai créé une performance audiovisuelle qui évoque la thalassophobie, en mettant l’accent sur un environnement qui rappelle les profondeurs de l’océan. J’ai créé une ambiance sonore sous-marine avec des sons de créatures et de poissons afin de créer un sentiment de peur, de malaise et d’inconfort.
+J’ai créé une performance audiovisuelle qui évoque la thalassophobie, en mettant l’accent sur un environnement qui rappelle les profondeurs de l’océan. J’ai créé une ambiance sonore sous-marine avec des sons de créatures et de poissons afin de créer un sentiment de peur, de solitude, de malaise et d’inconfort.
 
 **Lien vers la documentation du projet :**
 [la chasse lien youtube](https://youtu.be/zx5qwowoRbc) 
