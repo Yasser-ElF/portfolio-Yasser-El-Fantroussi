@@ -94,15 +94,15 @@ Le professeur nous a demandé de créer une performance audiovisuelle créative 
 **Description du projet :**
 J’ai créé une performance audiovisuelle qui évoque la thalassophobie, en mettant l’accent sur un environnement qui rappelle les profondeurs de l’océan. J’ai créé une ambiance sonore sous-marine avec des sons de créatures et de poissons afin de créer un sentiment de peur, de solitude, de malaise et d’inconfort.
 
-**Lien vers la documentation du projet :**
+**Lien vers la documentation du projet :**[la chasse lien youtube](https://youtu.be/zx5qwowoRbc) 
 <p>
 
-  <img src="medias/difusion_1.png" width="250">
-  <img src="medias/difusion_2.png" width="250">
-  <img src="medias/difusion_3.png" width="250">
+  <img src="medias/difusion_1.png" width="450">
+  <img src="medias/difusion_2.png" width="450">
+  <img src="medias/difusion_3.png" width="450">
+  <img src="medias/difusion_4.png" width="450">
 
 </p>
-[la chasse lien youtube](https://youtu.be/zx5qwowoRbc) 
 ---
 
 ## Projet 2 : Scène réactive
@@ -140,16 +140,16 @@ Le professeur nous a demandé de réaliser une expérience ludique et interactiv
 **Description du projet :**
 J’ai créé un jeu de plateforme 2D avec un style cartoon qui rappelle les jeux comme Mario. Le joueur possède plusieurs vies et doit progresser à travers trois niveaux en récoltant des fruits, avec des mécaniques de déplacement et de saut ainsi que différents obstacles comme des scies et des pics; le premier niveau sert de tutoriel.
 
-**Lien vers la documentation du projet :**
+**Lien vers la documentation du projet :**[GitHub — TP4_Yasser](https://github.com/Yasser-ElF/TP4_Yasser/tree/main)
 <p>
 
-  <img src="medias/jeux_scene0.png" width="250">
-  <img src="medias/jeux_scene1.png" width="250">
-  <img src="medias/jeux_scene2.png" width="250">
-  <img src="medias/jeux_scene3.png" width="250">
+  <img src="medias/jeux_scene0.png" width="450">
+  <img src="medias/jeux_scene1.png" width="450">
+  <img src="medias/jeux_scene2.png" width="450">
+  <img src="medias/jeux_scene3.png" width="450">
 
 </p>
-[GitHub — TP4_Yasser](https://github.com/Yasser-ElF/TP4_Yasser/tree/main)
+
 
 ---
 
@@ -188,17 +188,16 @@ Le professeur nous a demandé de créer une installation immersive ou une prése
 **Description du projet :**
 J’ai créé, avec mon équipe, un film qui représente la solitude et les troubles émotionnels qu’une personne peut vivre. Le film montre comment certains traits de personnalité peuvent progressivement disparaître et être remplacés par d’autres, ce qui peut créer des comportements dangereux chez certaines personnes vivant avec des troubles émotionnels ou psychologiques.
 
-**Lien vers la documentation du projet :**
+**Lien vers la documentation du projet :**[Disparaitre lien youtube](https://youtu.be/yRWwUVZQnKA)
 
 <p>
 
-  <img src="medias/film_1.png" width="250">
-  <img src="medias/film_2.png" width="250">
-  <img src="medias/film_3.png" width="250">
+  <img src="medias/film_1.png" width="450">
+  <img src="medias/film_2.png" width="450">
+  <img src="medias/film_3.png" width="450">
 
 </p>
 
-[Disparaitre lien youtube](https://youtu.be/yRWwUVZQnKA)
 
 ---
 
@@ -240,9 +239,9 @@ J’ai créé une publicité Web sur le thème du Ramadan pour un restaurant mus
 **Documentation du projet :**
 
 <p>
-  <img src="medias/bannier_web_peti.png" width="250">
-  <img src="medias/banniere_web.png" width="250">
-  <img src="medias/instagrame.png" width="250">
+  <img src="medias/bannier_web_peti.png" width="450">
+  <img src="medias/instagrame.png" width="450">
+  <img src="medias/banniere_web.png" width="450">
 </p>
 
 # Processus de création du projet
