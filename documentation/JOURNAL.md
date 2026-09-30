@@ -36,3 +36,7 @@ Outil : Figma AI
 
 Résultat : L’IA a généré une proposition de design pour mon site Web de portfolio à partir de mon moodboard, de ma planche de style et de ma fiche personnelle. J’ai utilisé le résultat comme inspiration et référence pour développer mon propre portfolio.
 
+# Amelioration du code et polishing
+Date : 23
+
+promt: 

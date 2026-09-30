@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "num": "01",
+    "theme": 1,
+    "category": "Projet académique — Performance audiovisuelle | Cours : Audio 2D, traitement audiovisuel et animation 3D",
+    "title": "La Chasse",
+    "role": "Rôle : créateur et concepteur (individuel)",
+    "desc": "Performance audiovisuelle immersive explorant la thalassophobie et les abysses océaniques. Intègre une ambiance sonore sous-marine anxiogène avec des sons de créatures et créations procédurales gérées sous Max, couplées à une animation 3D Maya et TouchDesigner diffusée sur projecteur et multi-diffusion acoustique.",
+    "tags": ["Max", "TouchDesigner", "Maya", "Spatial Audio", "Animation 3D"],
+    "ctaLabel": "Voir sur YouTube",
+    "ctaHref": "#"
+  },
+  {
+    "id": 2,
+    "num": "02",
+    "theme": 2,
+    "category": "Projet académique — Scène interactive (2D game) | Cours : Interactivité ludique",
+    "title": "Scène réactive",
+    "role": "Rôle : créateur et concepteur (individuel)",
+    "desc": "Jeu de plateforme interactif 2D au style cartoon inspiré des classiques rétro. Le joueur navigue à travers trois niveaux dynamiques en récoltant des fruits et en évitant scies et pics avec gestion de vies et mécaniques de saut précises. Échantillons sonores et animations réactives.",
+    "tags": ["Godot Engine", "Godot Script", "VS Code", "GitHub", "Game Audio 2D"],
+    "ctaLabel": "GitHub — TP4_Yasser",
+    "ctaHref": "#"
+  },
+  {
+    "id": 3,
+    "num": "03",
+    "theme": 3,
+    "category": "Projet académique — Court métrage en stop motion (1 min) | Cours : Vidéo 2",
+    "title": "Disparaître",
+    "role": "Rôle : réalisateur, montage visuel et sonore, caméraman (en équipe avec Ben Fradj, Adam Elchoueiri, Karim Fadi Sulici, Vasile Dominique, Tyler Richard)",
+    "desc": "Court métrage d'auteur en stop motion explorant la solitude et la lente érosion des troubles psychologiques et émotionnels. Conception sonore organique intégrale réalisée en studio Foley et montage cinématographique sous DaVinci Resolve pour traduire la transformation et le basculement intérieur.",
+    "tags": ["DaVinci Resolve", "Stop Motion", "Foley Studio", "Sound Design", "Montage Vidéo"],
+    "ctaLabel": "Voir sur YouTube",
+    "ctaHref": "#"
+  },
+  {
+    "id": 4,
+    "num": "04",
+    "theme": 4,
+    "category": "Projet académique — Publicité web & design graphique | Cours : Design graphique",
+    "title": "Pub Web : Ramadan Kareem — Food Menu (50 % OFF)",
+    "role": "Rôle : concepteur et créateur (individuel)",
+    "desc": "Campagne publicitaire digitale multiformat (post Instagram et bannières web adaptatives) pour un restaurant célébrant le Ramadan avec une promotion de 50 %. Composition visuelle épurée et hiérarchisée intégrant accroche percutante, visuel gastronomique et call-to-action interactif orienté conversion.",
+    "tags": ["Figma", "Direction Artistique", "UI/UX", "Campagne Digitale", "Branding"],
+    "ctaLabel": "Consulter la campagne",
+    "ctaHref": "#"
+  }
+]
