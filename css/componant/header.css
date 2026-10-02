@@ -34,8 +34,7 @@ a{ color:inherit; text-decoration:none; }
 ul{ list-style:none; }
 strong{ font-weight:600; }
 
-/* Generic placeholder look — still used for anything you haven't replaced yet.
-   Any element that now holds a real <img> no longer needs this class. */
+/* Generic placeholder look — still used for anything you haven't replaced yet. */
 .icon-placeholder{
   display:inline-flex;
   align-items:center;
@@ -51,25 +50,17 @@ strong{ font-weight:600; }
   border-radius:6px;
 }
 
-/* Any decorative slot that now contains a real image: the image fills its box */
-.hero-corner-icon img,
-.about-pattern img,
-.about-icon img,
-.projects-icon img,
-.skills-pattern img,
-.contact-icon img,
-.logo-mark img{
+/* Une seule règle pour TOUTES les images décoratives (logo, étoiles, pattern,
+   mandala) : chacune remplit son conteneur. La taille/position de chaque
+   conteneur reste définie par sa propre classe (hero-corner-icon, about-icon,
+   projects-icon, contact-icon, about-pattern, skills-pattern, logo-mark_top). */
+.decor-icon img{
   display:block;
   width:100%;
   height:100%;
   object-fit:contain;
 }
-.logo-mark_top img{
-  display:block;
-  width:30%;
-  height:30%;
-  object-fit:contain;
-}
+
 .eyebrow{
   font-size:.7rem;
   font-weight:700;
@@ -153,7 +144,7 @@ strong{ font-weight:600; }
   display:flex; align-items:center; justify-content:space-between;
   padding: 2rem 4rem 0;
 }
-.logo-mark{ display:inline-flex; width:48px; height:48px; }
+.logo-mark_top{ display:inline-flex; width:88px; height:88px; }
 .nav-links{ display:flex; gap:3rem; }
 .nav-links a{
   color:#fff; font-size:.82rem; font-weight:700;
@@ -255,8 +246,8 @@ strong{ font-weight:600; }
   overflow:hidden;
 }
 .about-pattern{
-  position:absolute; right:16px; top:-32px;
-  width:480px; height:480px; max-width:40vw; max-height:40vw;
+  position:absolute; right:16px; top:40px;
+  width:420px; height:420px; max-width:40vw; max-height:40vw;
   opacity:.14;
 }
 .about-icon{
