@@ -7,9 +7,28 @@
     "title": "La Chasse",
     "role": "Rôle : créateur et concepteur (individuel)",
     "desc": "Performance audiovisuelle immersive explorant la thalassophobie et les abysses océaniques. Intègre une ambiance sonore sous-marine anxiogène avec des sons de créatures et créations procédurales gérées sous Max, couplées à une animation 3D Maya et TouchDesigner diffusée sur projecteur et multi-diffusion acoustique.",
-    "tags": ["Max", "TouchDesigner", "Maya", "Spatial Audio", "Animation 3D"],
+    "tags": [
+      "Max",
+      "TouchDesigner",
+      "Maya",
+      "Spatial Audio",
+      "Animation 3D"
+    ],
     "ctaLabel": "Voir sur YouTube",
-    "ctaHref": "#"
+    "ctaHref": "#",
+    "details": {
+      "dates": "Dates à ajouter",
+      "brief": "Créer une performance audiovisuelle créative comprenant un minimum de quatre scènes, dont une scène utilisant l'animation 3D réalisée sans TouchDesigner. La performance devait aussi intégrer une ambiance sonore et des effets sonores créés et gérés avec Max.",
+      "images": [
+        "assets/videos/audivis_gif1.mp4",
+        "assets/videos/audivis_gif2.mp4",
+        "assets/videos/audivis_gif3.mp4",
+        "assets/videos/audivis_gif4.mp4",
+        "assets/videos/audivis_gif5.mp4"
+      ],
+      "link": "#",
+      "linkLabel": "Voir le projet"
+    }
   },
   {
     "id": 2,
@@ -19,9 +38,26 @@
     "title": "Scène réactive",
     "role": "Rôle : créateur et concepteur (individuel)",
     "desc": "Jeu de plateforme interactif 2D au style cartoon inspiré des classiques rétro. Le joueur navigue à travers trois niveaux dynamiques en récoltant des fruits et en évitant scies et pics avec gestion de vies et mécaniques de saut précises. Échantillons sonores et animations réactives.",
-    "tags": ["Godot Engine", "Godot Script", "VS Code", "GitHub", "Game Audio 2D"],
+    "tags": [
+      "Godot Engine",
+      "Godot Script",
+      "VS Code",
+      "GitHub",
+      "Game Audio 2D"
+    ],
     "ctaLabel": "GitHub — TP4_Yasser",
-    "ctaHref": "#"
+    "ctaHref": "#",
+    "details": {
+      "dates": "Dates à ajouter",
+      "brief": "Réaliser une expérience ludique et interactive comprenant des images et des échantillons sonores, dans laquelle l'interacteur progresse en accomplissant différentes actions.",
+      "images": [
+        "assets/videos/2d_gif1.mp4",
+        "assets/videos/2d_gif2.mp4",
+        "assets/videos/2d_gif3.mp4"
+      ],
+      "link": "#",
+      "linkLabel": "Voir le projet"
+    }
   },
   {
     "id": 3,
@@ -31,9 +67,27 @@
     "title": "Disparaître",
     "role": "Rôle : réalisateur, montage visuel et sonore, caméraman (en équipe avec Ben Fradj, Adam Elchoueiri, Karim Fadi Sulici, Vasile Dominique, Tyler Richard)",
     "desc": "Court métrage d'auteur en stop motion explorant la solitude et la lente érosion des troubles psychologiques et émotionnels. Conception sonore organique intégrale réalisée en studio Foley et montage cinématographique sous DaVinci Resolve pour traduire la transformation et le basculement intérieur.",
-    "tags": ["DaVinci Resolve", "Stop Motion", "Foley Studio", "Sound Design", "Montage Vidéo"],
+    "tags": [
+      "DaVinci Resolve",
+      "Stop Motion",
+      "Foley Studio",
+      "Sound Design",
+      "Montage Vidéo"
+    ],
     "ctaLabel": "Voir sur YouTube",
-    "ctaHref": "#"
+    "ctaHref": "#",
+    "details": {
+      "dates": "Dates à ajouter",
+      "brief": "Créer une installation immersive ou une présentation vidéo mosaïque en utilisant des éléments visuels et sonores pour raconter une histoire. Filmer nos propres séquences, réaliser l'ensemble de la vidéo en stop motion et créer une bande sonore composée exclusivement de sons enregistrés en studio Foley.",
+      "images": [
+        "assets/videos/gif_1.mp4",
+        "assets/videos/gif_2.mp4",
+        "assets/videos/gif_3.mp4",
+        "assets/videos/gif_4.mp4"
+      ],
+      "link": "#",
+      "linkLabel": "Voir le projet"
+    }
   },
   {
     "id": 4,
@@ -43,8 +97,21 @@
     "title": "Pub Web : Ramadan Kareem — Food Menu (50 % OFF)",
     "role": "Rôle : concepteur et créateur (individuel)",
     "desc": "Campagne publicitaire digitale multiformat (post Instagram et bannières web adaptatives) pour un restaurant célébrant le Ramadan avec une promotion de 50 %. Composition visuelle épurée et hiérarchisée intégrant accroche percutante, visuel gastronomique et call-to-action interactif orienté conversion.",
-    "tags": ["Figma", "Direction Artistique", "UI/UX", "Campagne Digitale", "Branding"],
+    "tags": [
+      "Figma",
+      "Direction Artistique",
+      "UI/UX",
+      "Campagne Digitale",
+      "Branding"
+    ],
     "ctaLabel": "Consulter la campagne",
-    "ctaHref": "#"
+    "ctaHref": "#",
+    "details": {
+      "dates": "Dates à ajouter",
+      "brief": "Créer une campagne de publicité Web en plusieurs formats pour présenter un sujet qui nous passionne, tout en respectant le principe de simplicité. Trois compositions différentes et harmonieuses : un post Instagram et deux bannières Web, chacune avec un slogan ou une accroche, un élément visuel et un bouton permettant de passer à l'action.",
+      "images": [],
+      "link": "#",
+      "linkLabel": "Voir le projet"
+    }
   }
 ]

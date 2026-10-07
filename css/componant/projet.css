@@ -1,0 +1,208 @@
+/* projet.css — section Projets : cartes, thèmes, bouton "Voir plus", galerie */
+
+/* ===================================================
+   PROJECTS
+=================================================== */
+.projects{ background: #F2F0EF; padding: 0 4rem 8rem; }
+.projects-inner{ max-width:1152px; margin:0 auto; }
+.projects-header{ display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:4rem; }
+.projects-icon{ width:80px; height:80px; opacity:.3; flex-shrink:0; }
+
+.project-list{ display:flex; flex-direction:column; gap:4rem; }
+
+.project-card{
+  position:relative;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+}
+.project-glow{ position:absolute; inset:0; pointer-events:none; }
+.project-body{
+  position:relative;
+  max-width:768px;
+  min-height:380px;
+  padding:3.5rem;
+  display:flex; flex-direction:column; justify-content:space-between; gap:1.5rem;
+}
+.project-eyebrow{
+  color: rgba(125,211,252,.9);
+  font-size:.7rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+  margin-bottom:.5rem;
+}
+.project-body h3{
+  font-family: var(--font-serif);
+  font-weight:700;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  line-height:1.1;
+  color:#fff;
+  margin-bottom:.4rem;
+}
+.project-role{
+  color: var(--gold);
+  font-size:.72rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase;
+  margin-bottom:.6rem;
+}
+.project-desc{ color:#e5e7eb; font-size:1rem; line-height:1.6; max-width:60ch; }
+.project-tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem; }
+.project-tags span{
+  background: rgba(0,0,0,.4);
+  border:1px solid rgba(255,255,255,.2);
+  padding:.3rem .7rem;
+  font-size:.65rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase;
+  color:#e5e7eb;
+}
+.project-cta{
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:#fff; color: var(--ink);
+  width:fit-content;
+  padding:.65rem 1.3rem;
+  border-radius:3px;
+  font-size:.7rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+  box-shadow:0 10px 15px -3px rgba(0,0,0,.1);
+  margin-top:1rem;
+}
+.project-cta:hover{ background:#f1f1f1; }
+.cta-icon{ width:16px; height:16px; padding:0; font-size:.6rem; }
+
+/* Themes 1 à 4 : appliquées via JS (theme-${n}) sur chaque .project-card,
+   réutilisées en boucle si tu as plus de 4 projets dans le JSON. */
+.theme-1{ background: linear-gradient(135deg, rgba(8,18,38,.88) 0%, rgba(12,30,60,.75) 100%); }
+.theme-1 .project-glow{ background:
+  radial-gradient(ellipse 200px 200px at 80% 20%, rgba(234,179,8,.35), transparent),
+  radial-gradient(ellipse 220px 220px at 10% 80%, rgba(37,99,235,.4), transparent); }
+.theme-1 .project-body{ background: linear-gradient(90deg, rgba(5,12,27,.95) 0%, rgba(8,23,48,.85) 50%, rgba(8,23,48,0) 100%); }
+
+.theme-2{ background: linear-gradient(135deg, rgba(14,18,30,.9) 0%, rgba(28,36,60,.78) 100%); }
+.theme-2 .project-glow{ background:
+  radial-gradient(ellipse 200px 200px at 85% 75%, rgba(245,158,11,.4), transparent),
+  radial-gradient(ellipse 220px 220px at 20% 30%, rgba(59,130,246,.35), transparent); }
+.theme-2 .project-body{ background: linear-gradient(90deg, rgba(7,11,22,.95) 0%, rgba(13,22,42,.85) 50%, rgba(13,22,42,0) 100%); }
+
+.theme-3{ background: linear-gradient(135deg, rgba(10,15,28,.9) 0%, rgba(20,25,42,.8) 100%); }
+.theme-3 .project-glow{ background:
+  radial-gradient(ellipse 200px 200px at 75% 35%, rgba(217,119,6,.4), transparent),
+  radial-gradient(ellipse 220px 220px at 25% 60%, rgba(30,58,138,.5), transparent); }
+.theme-3 .project-body{ background: linear-gradient(90deg, rgba(6,10,22,.95) 0%, rgba(11,20,38,.85) 50%, rgba(11,20,38,0) 100%); }
+
+.theme-4{ background: linear-gradient(135deg, rgba(12,16,32,.9) 0%, rgba(22,28,48,.8) 100%); }
+.theme-4 .project-glow{ background:
+  radial-gradient(ellipse 200px 200px at 80% 50%, rgba(245,158,11,.45), transparent),
+  radial-gradient(ellipse 220px 220px at 15% 40%, rgba(59,130,246,.4), transparent); }
+.theme-4 .project-body{ background: linear-gradient(90deg, rgba(6,10,24,.95) 0%, rgba(12,22,44,.85) 50%, rgba(12,22,44,0) 100%); }
+
+/* ===================================================
+   PROJETS — "VOIR PLUS" (carte qui s'agrandit)
+=================================================== */
+.project-actions{
+  display:flex; flex-wrap:wrap; align-items:center; gap:.75rem;
+  margin-top:1rem;
+}
+.project-actions .project-cta{ margin-top:0; }
+
+.project-toggle{
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:3px;
+  padding:.65rem 1.3rem;
+  font-family: var(--font-body);
+  font-size:.7rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+  cursor:pointer;
+  transition: background .2s ease, border-color .2s ease;
+}
+.project-toggle:hover{ background:rgba(255,255,255,.1); border-color:#fff; }
+.project-toggle:focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; }
+.project-toggle-chevron{ display:inline-block; transition: transform .35s ease; }
+.project-card.is-open .project-toggle-chevron{ transform: rotate(180deg); }
+
+/* Zone dépliable : on anime la hauteur de 0 à "auto" avec grid 0fr → 1fr */
+.project-details{
+  position:relative;
+  display:grid;
+  grid-template-rows:0fr;
+  visibility:hidden;
+  transition: grid-template-rows .5s ease, visibility 0s linear .5s;
+}
+.project-card.is-open .project-details{
+  grid-template-rows:1fr;
+  visibility:visible;
+  transition: grid-template-rows .5s ease, visibility 0s;
+}
+.project-details-inner{ overflow:hidden; min-height:0; }
+.project-details-content{
+  margin:0 3.5rem;
+  padding:2rem 0 3.5rem;
+  border-top:1px solid rgba(255,255,255,.15);
+  display:flex; flex-direction:column; gap:2rem;
+}
+
+.project-detail-grid{
+  display:grid; grid-template-columns: 1fr 2fr; gap:2rem;
+}
+.project-detail-label{
+  color: var(--gold);
+  font-size:.7rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+  margin-bottom:.5rem;
+}
+.project-detail-text{ color:#e5e7eb; font-size:.95rem; line-height:1.6; max-width:65ch; }
+
+/* Galerie : grille de 6 colonnes → 3 par rangée par défaut,
+   2 par rangée pour 4 médias, et la dernière rangée centrée pour 5 médias */
+.project-gallery{
+  display:grid; grid-template-columns: repeat(6, 1fr); gap:1rem;
+}
+.project-shot{
+  grid-column: span 2;
+  aspect-ratio:16 / 9;
+  border-radius:4px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.04);
+}
+.project-gallery[data-count="1"] .project-shot{ grid-column: span 6; }
+.project-gallery[data-count="2"] .project-shot,
+.project-gallery[data-count="4"] .project-shot{ grid-column: span 3; }
+.project-gallery[data-count="5"] .project-shot:nth-child(n+4){ grid-column: span 3; }
+
+.project-shot img,
+.project-shot video{ display:block; width:100%; height:100%; object-fit:cover; }
+.project-shot--empty{
+  display:flex; align-items:center; justify-content:center;
+  color: rgba(255,255,255,.4);
+  font-size:.7rem; letter-spacing:.08em; text-transform:uppercase;
+  border-style:dashed;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 8px, rgba(255,255,255,.02) 8px 16px);
+}
+
+.project-link{
+  align-self:flex-start;
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:#fff; color: var(--ink);
+  padding:.75rem 1.5rem;
+  border-radius:3px;
+  font-size:.72rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+  box-shadow:0 10px 15px -3px rgba(0,0,0,.1);
+  transition: background .2s ease;
+}
+.project-link:hover{ background:#f1f1f1; }
+
+@media (max-width: 600px){
+  .project-gallery .project-shot{ grid-column: span 6 !important; }
+}
+@media (max-width: 900px){
+  .project-details-content{ margin:0 2rem; padding-bottom:2rem; }
+  .project-detail-grid{ grid-template-columns:1fr; gap:1.5rem; }
+}
+@media (prefers-reduced-motion: reduce){
+  .project-details, .project-toggle-chevron{ transition:none; }
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+@media (max-width: 900px){
+  .projects{ padding-left:1.5rem; padding-right:1.5rem; }
+  .project-body{ padding:2rem; max-width:100%; }
+}
