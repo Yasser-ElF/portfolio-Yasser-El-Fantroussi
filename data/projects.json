@@ -70,7 +70,6 @@
     "tags": [
       "DaVinci Resolve",
       "Stop Motion",
-      "Foley Studio",
       "Sound Design",
       "Montage Vidéo"
     ],
@@ -96,6 +95,7 @@
     "category": "Projet académique — Publicité web & design graphique | Cours : Design graphique",
     "title": "Pub Web : Ramadan Kareem — Food Menu (50 % OFF)",
     "role": "Rôle : concepteur et créateur (individuel)",
+    "time": "Temps de réalisation : 1 semaine",
     "desc": "Campagne publicitaire digitale multiformat (post Instagram et bannières web adaptatives) pour un restaurant célébrant le Ramadan avec une promotion de 50 %. Composition visuelle épurée et hiérarchisée intégrant accroche percutante, visuel gastronomique et call-to-action interactif orienté conversion.",
     "tags": [
       "Figma",
@@ -109,9 +109,15 @@
     "details": {
       "dates": "Dates à ajouter",
       "brief": "Créer une campagne de publicité Web en plusieurs formats pour présenter un sujet qui nous passionne, tout en respectant le principe de simplicité. Trois compositions différentes et harmonieuses : un post Instagram et deux bannières Web, chacune avec un slogan ou une accroche, un élément visuel et un bouton permettant de passer à l'action.",
-      "images": [],
+      "images": [
+        "assets/images/instagrame.png",
+        "assets/images/banniere_web.png",
+        "assets/images/bannier_web_peti.png"
+        
+      ],
       "link": "#",
       "linkLabel": "Voir le projet"
+      
     }
   }
 ]

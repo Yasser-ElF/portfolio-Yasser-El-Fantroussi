@@ -72,6 +72,7 @@ function createProjectCard(project) {
         <p class="project-eyebrow">${project.num} — ${project.category}</p>
         <h3>${project.title}</h3>
         <p class="project-role">${project.role}</p>
+        <p class="project-time">${project.time}</p>
         <p class="project-desc">${project.desc}</p>
         <div class="project-tags">${tagsHTML}</div>
         <div class="project-actions">
