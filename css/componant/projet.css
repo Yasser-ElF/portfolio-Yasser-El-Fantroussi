@@ -1,62 +1,38 @@
-/* =========================================================
-   projet.css — LA SECTION PROJETS
-
-   Contenu : les cartes de projets, les 4 thèmes de couleur, le bouton « Voir plus »,
-   la zone qui s'ouvre et la galerie d'images / vidéos.
-   IMPORTANT : les cartes ne sont pas écrites dans le HTML. Elles sont fabriquées
-   par js/main.js à partir de data/projects.json, puis injectées dans .project-list.
-
-   COMMENT LIRE UN FICHIER CSS (mini-lexique)
-   - Une règle : sélecteur { propriété: valeur; }  →  « qui » on stylise { « quoi » changer: « comment »; }
-   - .nom = une CLASSE (class="nom" dans le HTML) ; #nom = un id ; a = toutes les balises <a>
-   - .a .b (avec espace) = un .b à l'INTÉRIEUR d'un .a ;  .a.b (sans espace) = un élément qui a les DEUX classes
-   - .a, .b (avec virgule) = les mêmes règles pour les deux
-   - Quand deux règles se contredisent, la plus « spécifique » gagne, puis la plus basse dans le fichier.
-   ========================================================= */
+/* projet.css — section Projets : cartes, thèmes, bouton "Voir plus", galerie */
 
 /* ===================================================
    PROJECTS
 =================================================== */
-/* SECTION PROJETS : fond gris très clair. padding: 0 en haut, 4rem sur les côtés, 8rem en bas. */
+/* Les cartes de projets. Elles ne sont pas écrites dans le HTML : main.js les fabrique à partir de data/projects.json
+   et les place dans .project-list. Chaque carte a un thème de couleur (theme-1 à theme-4). */
 .projects{ background: #F2F0EF; padding: 0 4rem 8rem; }
-/* Conteneur centré de 1152px maximum. */
 .projects-inner{ max-width:1152px; margin:0 auto; }
-/* Le titre à gauche et l'étoile à droite (flex + space-between). */
 .projects-header{ display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:4rem; }
-/* L'étoile décorative. flex-shrink:0 → elle ne rétrécit pas si l'espace manque. */
 .projects-icon{ width:80px; height:80px; opacity:.3; flex-shrink:0; }
 
-/* La liste des cartes : flex en colonne, gap:4rem = 4rem d'espace entre deux cartes.
-   (C'est DANS ce conteneur que main.js injecte les cartes.) */
 .project-list{ display:flex; flex-direction:column; gap:4rem; }
 
-/* UNE CARTE DE PROJET.
-   overflow:hidden → coupe le contenu aux coins arrondis ET fait fonctionner l'animation d'ouverture de la zone « Voir plus ». */
 .project-card{
-  position:relative;   /* repère pour .project-glow (en absolute) */
+  position:relative;
   border:1px solid rgba(255,255,255,.1);
   border-radius:6px;
-  overflow:hidden;   /* coins arrondis + animation d'ouverture */
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);   /* grosse ombre sous la carte */
+  overflow:hidden;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
 }
-/* Couche en arrière-plan (absolute + inset:0) qui porte les LUEURS colorées. Sa couleur dépend du thème (.theme-1 à .theme-4).
-   pointer-events:none → elle ne bloque pas les clics. */
+/* Couche d'arrière-plan qui porte les lueurs colorées du thème (pointer-events:none : elle ne bloque pas les clics). */
 .project-glow{ position:absolute; inset:0; pointer-events:none; }
-/* Le TEXTE de la carte (titre, description, tags, boutons). */
 .project-body{
-  position:relative;   /* pour passer AU-DESSUS de la lueur */
-  max-width:768px;   /* le texte reste dans la partie gauche de la carte */
-  min-height:380px;   /* hauteur minimale de la carte */
-  padding:3.5rem;   /* espace intérieur (3.5rem partout) */
-  display:flex; flex-direction:column; justify-content:space-between; gap:1.5rem;   /* flex en colonne ; space-between répartit les blocs sur toute la hauteur */
+  position:relative;
+  max-width:768px;
+  min-height:380px;
+  padding:3.5rem;
+  display:flex; flex-direction:column; justify-content:space-between; gap:1.5rem;
 }
-/* La ligne « 01 — Projet académique… » : petite, cyan pâle, majuscules. */
 .project-eyebrow{
   color: rgba(125,211,252,.9);
   font-size:.7rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
   margin-bottom:.5rem;
 }
-/* Le titre du projet (« un h3 dans .project-body ») : Playfair, gras, taille adaptative (clamp). */
 .project-body h3{
   font-family: var(--font-serif);
   font-weight:700;
@@ -65,17 +41,13 @@
   color:#fff;
   margin-bottom:.4rem;
 }
-/* La ligne « Rôle : … » : dorée, petite, majuscules. */
 .project-role{
   color: var(--gold);
   font-size:.72rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase;
   margin-bottom:.6rem;
 }
-/* La description. max-width:60ch → lignes de 60 caractères maximum (plus lisible). */
 .project-desc{ color:#e5e7eb; font-size:1rem; line-height:1.6; max-width:60ch; }
-/* La rangée des pastilles d'outils (flex-wrap : retour à la ligne si besoin). */
 .project-tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem; }
-/* Une pastille : fond noir translucide, bordure, petit texte en majuscules. */
 .project-tags span{
   background: rgba(0,0,0,.4);
   border:1px solid rgba(255,255,255,.2);
@@ -83,8 +55,6 @@
   font-size:.65rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase;
   color:#e5e7eb;
 }
-/* Le bouton blanc (« Voir sur YouTube »). width:fit-content → il garde la largeur de son contenu
-   (sans ça, dans une colonne flex, il s'étirerait sur toute la largeur). */
 .project-cta{
   display:inline-flex; align-items:center; gap:.5rem;
   background:#fff; color: var(--ink);
@@ -95,40 +65,29 @@
   box-shadow:0 10px 15px -3px rgba(0,0,0,.1);
   margin-top:1rem;
 }
-/* Au survol : gris très clair. */
 .project-cta:hover{ background:#f1f1f1; }
-/* La mini flèche ▸ dans le bouton (elle utilise aussi .icon-placeholder de style.css). */
 .cta-icon{ width:16px; height:16px; padding:0; font-size:.6rem; }
 
 /* Themes 1 à 4 : appliquées via JS (theme-${n}) sur chaque .project-card,
    réutilisées en boucle si tu as plus de 4 projets dans le JSON. */
-/* LES 4 THÈMES DE COULEUR. main.js ajoute theme-1, theme-2, theme-3 ou theme-4 sur chaque carte (class=« project-card theme-2 »).
-   Chaque thème définit 3 choses : (1) le fond de la carte, (2) 2 lueurs colorées, (3) un dégradé sombre sous le texte.
-   (1) FOND : dégradé à 135° entre deux bleus très sombres, semi-transparents. */
 .theme-1{ background: linear-gradient(135deg, rgba(8,18,38,.88) 0%, rgba(12,30,60,.75) 100%); }
-/* (2) LUEURS : radial-gradient(ellipse 200px 200px at 80% 20%, couleur, transparent) = une tache de 200px placée à 80% de la largeur
-   et 20% de la hauteur, qui s'estompe vers le transparent. Les couleurs viennent de la palette du hero. */
 .theme-1 .project-glow{ background:
   radial-gradient(ellipse 200px 200px at 80% 20%, rgba(138,135,168,.45), transparent),
   radial-gradient(ellipse 220px 220px at 10% 80%, rgba(30,127,196,.40), transparent); }
-/* (3) DÉGRADÉ HORIZONTAL (90deg) : très sombre à gauche (derrière le texte, pour qu'il reste lisible) → transparent à droite (on voit les lueurs). */
 .theme-1 .project-body{ background: linear-gradient(90deg, rgba(5,12,27,.95) 0%, rgba(8,23,48,.85) 50%, rgba(8,23,48,0) 100%); }
 
-/* Thème 2 : même principe que le thème 1, avec d'autres couleurs (mauve + bleu). */
 .theme-2{ background: linear-gradient(135deg, rgba(14,18,30,.9) 0%, rgba(28,36,60,.78) 100%); }
 .theme-2 .project-glow{ background:
   radial-gradient(ellipse 200px 200px at 85% 75%, rgba(138,112,120,.45), transparent),
   radial-gradient(ellipse 220px 220px at 20% 30%, rgba(59,130,246,.35), transparent); }
 .theme-2 .project-body{ background: linear-gradient(90deg, rgba(7,11,22,.95) 0%, rgba(13,22,42,.85) 50%, rgba(13,22,42,0) 100%); }
 
-/* Thème 3 : même principe (périwinkle + bleu profond). */
 .theme-3{ background: linear-gradient(135deg, rgba(10,15,28,.9) 0%, rgba(20,25,42,.8) 100%); }
 .theme-3 .project-glow{ background:
   radial-gradient(ellipse 200px 200px at 75% 35%, rgba(158,174,232,.38), transparent),
   radial-gradient(ellipse 220px 220px at 25% 60%, rgba(30,58,138,.5), transparent); }
 .theme-3 .project-body{ background: linear-gradient(90deg, rgba(6,10,22,.95) 0%, rgba(11,20,38,.85) 50%, rgba(11,20,38,0) 100%); }
 
-/* Thème 4 : même principe (lilas + bleu). Avec plus de 4 projets, les thèmes reviennent en boucle. */
 .theme-4{ background: linear-gradient(135deg, rgba(12,16,32,.9) 0%, rgba(22,28,48,.8) 100%); }
 .theme-4 .project-glow{ background:
   radial-gradient(ellipse 200px 200px at 80% 50%, rgba(168,148,190,.40), transparent),
@@ -138,58 +97,47 @@
 /* ===================================================
    PROJETS — "VOIR PLUS" (carte qui s'agrandit)
 =================================================== */
-/* La rangée des 2 boutons (« Voir sur… » + « Voir plus ») : flex, avec retour à la ligne si besoin. */
+/* Bouton « Voir plus » : main.js ajoute / retire la classe is-open sur la carte, et le CSS ouvre ou ferme la zone de détails.
+   Puis la galerie d'images et de vidéos. */
 .project-actions{
   display:flex; flex-wrap:wrap; align-items:center; gap:.75rem;
   margin-top:1rem;
 }
-/* Dans cette rangée on annule la marge du haut du bouton (le gap de la rangée suffit).
-   Règle plus spécifique (2 classes) → elle l'emporte sur .project-cta. */
 .project-actions .project-cta{ margin-top:0; }
 
-/* LE BOUTON « VOIR PLUS ». C'est un vrai <button> : les boutons ont un style par défaut du navigateur,
-   on le remet donc à zéro (fond transparent, couleur, bordure, police). */
 .project-toggle{
   display:inline-flex; align-items:center; gap:.5rem;
-  background:transparent;   /* on enlève le fond par défaut des boutons */
+  background:transparent;
   color:#fff;
   border:1px solid rgba(255,255,255,.5);
   border-radius:3px;
   padding:.65rem 1.3rem;
-  font-family: var(--font-body);   /* les boutons n'héritent PAS la police : il faut la redéfinir */
+  font-family: var(--font-body);
   font-size:.7rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
-  cursor:pointer;   /* curseur en forme de main */
-  transition: background .2s ease, border-color .2s ease;   /* survol en douceur */
+  cursor:pointer;
+  transition: background .2s ease, border-color .2s ease;
 }
-/* Au survol : fond léger + bordure blanche. */
 .project-toggle:hover{ background:rgba(255,255,255,.1); border-color:#fff; }
-/* Quand on arrive sur le bouton AU CLAVIER (touche Tab) : contour cyan bien visible. Important pour l'accessibilité. */
 .project-toggle:focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; }
-/* La flèche ▾. display:inline-block est NÉCESSAIRE : une rotation (transform) ne fonctionne pas sur un élément « inline ». */
 .project-toggle-chevron{ display:inline-block; transition: transform .35s ease; }
-/* Quand la carte a la classe is-open (ajoutée par main.js au clic) : la flèche tourne de 180° (la transition rend ça doux). */
 .project-card.is-open .project-toggle-chevron{ transform: rotate(180deg); }
 
 /* Zone dépliable : on anime la hauteur de 0 à "auto" avec grid 0fr → 1fr */
-/* LA ZONE QUI S'OUVRE. Le truc : on ne peut pas animer « height » de 0 à auto, mais on PEUT animer une ligne de GRID :
-   grid-template-rows:0fr (fermé = hauteur 0) → 1fr (ouvert = hauteur du contenu).
-   visibility:hidden : le contenu fermé n'est plus atteignable au clavier ; le délai « visibility 0s linear .5s » attend la fin de l'animation avant de cacher. */
+/* La zone qui s'ouvre. On ne peut pas animer height vers « auto », mais on peut animer une ligne de grid :
+   fermée = 0fr (hauteur 0), ouverte = 1fr. visibility:hidden empêche d'atteindre le contenu caché au clavier. */
 .project-details{
   position:relative;
-  display:grid;   /* mise en page en grille (nécessaire pour l'astuce 0fr → 1fr) */
-  grid-template-rows:0fr;   /* FERMÉ : la ligne a une hauteur de 0 */
-  visibility:hidden;   /* invisible ET inatteignable au clavier */
-  transition: grid-template-rows .5s ease, visibility 0s linear .5s;   /* anime la hauteur en 0,5 s ; la visibilité change APRÈS 0,5 s */
+  display:grid;
+  grid-template-rows:0fr;
+  visibility:hidden;
+  transition: grid-template-rows .5s ease, visibility 0s linear .5s;
 }
-/* État OUVERT : la ligne passe à 1fr (la zone grandit) et visibility:visible sans délai (0s). */
 .project-card.is-open .project-details{
-  grid-template-rows:1fr;   /* OUVERT : la ligne prend la hauteur de son contenu */
-  visibility:visible;   /* visible tout de suite */
-  transition: grid-template-rows .5s ease, visibility 0s;   /* visibilité immédiate (0s) */
+  grid-template-rows:1fr;
+  visibility:visible;
+  transition: grid-template-rows .5s ease, visibility 0s;
 }
-/* overflow:hidden + min-height:0 : INDISPENSABLES pour que la ligne de grille puisse descendre à 0 et que le contenu soit caché pendant l'animation. */
 .project-details-inner{ overflow:hidden; min-height:0; }
-/* Le contenu de la zone : marges sur les côtés, ligne de séparation en haut (border-top), éléments empilés (flex en colonne). */
 .project-details-content{
   margin:0 3.5rem;
   padding:2rem 0 3.5rem;
@@ -197,51 +145,40 @@
   display:flex; flex-direction:column; gap:2rem;
 }
 
-/* « Dates » (1 part) et « Consigne de l'enseignant » (2 parts) côte à côte : grid-template-columns:1fr 2fr. */
 .project-detail-grid{
   display:grid; grid-template-columns: 1fr 2fr; gap:2rem;
 }
-/* Les petits titres dorés « DATES », « CONSIGNE… », « IMAGES… ». */
 .project-detail-label{
   color: var(--gold);
   font-size:.7rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
   margin-bottom:.5rem;
 }
-/* Le texte sous ces titres. */
 .project-detail-text{ color:#e5e7eb; font-size:.95rem; line-height:1.6; max-width:65ch; }
 
 /* Galerie : grille de 6 colonnes → 3 par rangée par défaut,
    2 par rangée pour 4 médias, et la dernière rangée centrée pour 5 médias */
-/* LA GALERIE : grille de 6 colonnes égales. Pourquoi 6 ? C'est divisible par 2 ET par 3. */
+/* 6 colonnes : chaque case occupe 2 colonnes (3 par rangée). L'attribut data-count (écrit par main.js)
+   adapte la disposition : 1 → pleine largeur, 2 ou 4 → 2 par rangée, 5 → 3 + 2. */
 .project-gallery{
-  display:grid; grid-template-columns: repeat(6, 1fr); gap:1rem;   /* repeat(6, 1fr) = 6 colonnes de largeur égale ; gap = espace entre les cases */
+  display:grid; grid-template-columns: repeat(6, 1fr); gap:1rem;
 }
-/* Une case de la galerie : span 2 = elle occupe 2 colonnes sur 6 → 3 cases par rangée.
-   aspect-ratio:16/9 → la hauteur se calcule automatiquement. */
 .project-shot{
-  grid-column: span 2;   /* occupe 2 colonnes sur 6 */
-  aspect-ratio:16 / 9;   /* forme 16:9 : la hauteur se déduit de la largeur */
+  grid-column: span 2;
+  aspect-ratio:16 / 9;
   border-radius:4px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.15);
   background: rgba(255,255,255,.04);
 }
-/* [data-count=« 1 »] = la galerie dont l'attribut data-count vaut 1 (main.js écrit ce nombre dans le HTML).
-   Avec 1 seul média : pleine largeur (span 6). */
 .project-gallery[data-count="1"] .project-shot{ grid-column: span 6; }
-/* Avec 2 ou 4 médias : span 3 → 2 par rangée. */
 .project-gallery[data-count="2"] .project-shot,
 .project-gallery[data-count="4"] .project-shot{ grid-column: span 3; }
-/* Avec 5 médias : :nth-child(n+4) = la 4e case et les suivantes → elles prennent span 3 (3 petites en haut, 2 grandes en bas). */
 .project-gallery[data-count="5"] .project-shot:nth-child(n+4){ grid-column: span 3; }
 
 /* Images : "contain" = l'image entière reste visible (rien n'est coupé), peu importe son format.
    Les vidéos restent en "cover" pour remplir la case. */
-/* Les IMAGES : object-fit:contain → l'image est ENTIÈRE, jamais coupée. */
 .project-shot img{ display:block; width:100%; height:100%; object-fit:contain; }
-/* Les VIDÉOS : object-fit:cover → la vidéo REMPLIT la case (en étant rognée au besoin). */
 .project-shot video{ display:block; width:100%; height:100%; object-fit:cover; }
-/* Placeholder (case vide) : bordure pointillée + rayures. Le « -- » est une convention (appelée BEM) pour dire « variante ». */
 .project-shot--empty{
   display:flex; align-items:center; justify-content:center;
   color: rgba(255,255,255,.4);
@@ -250,7 +187,6 @@
   background: repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 8px, rgba(255,255,255,.02) 8px 16px);
 }
 
-/* Le bouton blanc à la fin de la zone ouverte. align-self:flex-start → il garde la largeur de son texte (sinon il s'étirerait dans la colonne flex). */
 .project-link{
   align-self:flex-start;
   display:inline-flex; align-items:center; gap:.5rem;
@@ -261,39 +197,24 @@
   box-shadow:0 10px 15px -3px rgba(0,0,0,.1);
   transition: background .2s ease;
 }
-/* Au survol : gris très clair. */
 .project-link:hover{ background:#f1f1f1; }
 
-/* TRÈS PETITS ÉCRANS (600px ou moins). */
 @media (max-width: 600px){
-  /* Toutes les cases en pleine largeur (1 par ligne). !important → bat les règles [data-count], plus spécifiques. */
   .project-gallery .project-shot{ grid-column: span 6 !important; }
 }
-/* ÉCRANS MOYENS ET PETITS (900px ou moins) : zone ouverte plus étroite. */
 @media (max-width: 900px){
-  /* Sur écran moyen/petit : marges réduites. */
   .project-details-content{ margin:0 2rem; padding-bottom:2rem; }
-  /* Sur écran moyen/petit : une seule colonne. */
   .project-detail-grid{ grid-template-columns:1fr; gap:1.5rem; }
 }
-/* MOUVEMENT RÉDUIT : on supprime les transitions pour les personnes qui le demandent dans leur système. */
 @media (prefers-reduced-motion: reduce){
-  /* transition:none → plus d'animation. */
   .project-details, .project-toggle-chevron{ transition:none; }
 }
 
 /* ===================================================
    RESPONSIVE
 =================================================== */
-/* RESPONSIVE de la section Projets (900px ou moins). */
+/* Petits écrans (900px et moins) : moins de marges. */
 @media (max-width: 900px){
-  /* Sur petit écran : moins de marge sur les côtés. */
   .projects{ padding-left:1.5rem; padding-right:1.5rem; }
-  /* Sur petit écran : moins de marge intérieure et pleine largeur. */
   .project-body{ padding:2rem; max-width:100%; }
-}
-.projet-time{
-  color: var(--gold);
-  font-size:.72rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase;
-  margin-bottom:.6rem;
 }

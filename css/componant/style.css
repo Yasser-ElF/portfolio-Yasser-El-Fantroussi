@@ -1,79 +1,57 @@
-/* =========================================================
-   style.css — LES STYLES GÉNÉRAUX
-
-   Contenu : les variables (couleurs, polices), la base (reset), les boutons,
-   le bandeau défilant, À propos, Compétences, Contact, Pied de page.
-   (La navigation + le hero sont dans header.css ; les projets dans projet.css.)
-
-   COMMENT LIRE UN FICHIER CSS (mini-lexique)
-   - Une règle : sélecteur { propriété: valeur; }  →  « qui » on stylise { « quoi » changer: « comment »; }
-   - .nom = une CLASSE (class="nom" dans le HTML) ; #nom = un id ; a = toutes les balises <a>
-   - .a .b (avec espace) = un .b à l'INTÉRIEUR d'un .a ;  .a.b (sans espace) = un élément qui a les DEUX classes
-   - .a, .b (avec virgule) = les mêmes règles pour les deux
-   - Quand deux règles se contredisent, la plus « spécifique » gagne, puis la plus basse dans le fichier.
-   ========================================================= */
+/* style.css — styles généraux : variables, base, boutons, ticker, à propos, compétences, contact, footer */
 
 /* ===================================================
    TOKENS
 =================================================== */
-/* LES VARIABLES. On écrit une couleur ou une police UNE seule fois ici (--nom: valeur;)
-   et on la réutilise partout avec var(--nom). Pour changer une couleur de tout le site : on la change ici.
-   « :root » désigne l'élément <html> : les variables sont donc disponibles dans toute la page. */
+/* Variables (une couleur ou une police écrite une seule fois, réutilisée avec var(--nom)),
+   remise à zéro des styles par défaut, puis styles communs : titres et boutons. */
 :root{
-  --hero-bg:      #050b18;   /* fond du hero */
-  --ticker-bg:    #0b0e1d;   /* fond du bandeau */
-  --cream:        #f5f3ee;   /* crème (fond du body) */
-  --skills-bg:    #12162d;   /* fond des compétences */
-  --contact-bg:   #0c0f20;   /* fond du contact */
-  --footer-bg:    #080a14;   /* fond du pied de page */
-  --ink:          #14172b;   /* texte foncé */
-  --blue-accent:  #3b62ff;   /* bleu d'accent (petits titres) */
-  --gold:         #fcd34d;   /* doré */
-  --amber:        #fbbf24;   /* ambre (petits points) */
-  --cyan:         #7dd3fc;   /* cyan */
-  --sky:          #38bdf8;   /* bleu ciel (puces du bandeau) */
-  --white:        #ffffff;   /* blanc */
+  --hero-bg:      #050b18;
+  --ticker-bg:    #0b0e1d;
+  --cream:        #f5f3ee;
+  --skills-bg:    #12162d;
+  --contact-bg:   #0c0f20;
+  --footer-bg:    #080a14;
+  --ink:          #14172b;
+  --blue-accent:  #3b62ff;
+  --gold:         #fcd34d;
+  --amber:        #fbbf24;
+  --cyan:         #7dd3fc;
+  --sky:          #38bdf8;
+  --white:        #ffffff;
 
-  --font-display: 'Cinzel', serif;   /* police du gros titre (« serif » = police de secours) */
-  --font-serif:   'Playfair Display', serif;   /* police des titres élégants */
-  --font-body:    'Plus Jakarta Sans', sans-serif;   /* police du texte courant */
+  --font-display: 'Cinzel', serif;
+  --font-serif:   'Playfair Display', serif;
+  --font-body:    'Plus Jakarta Sans', sans-serif;
 }
 
-/* RESET : s'applique à TOUS les éléments.
-   - box-sizing:border-box → la largeur inclut le padding et la bordure (calculs plus simples)
-   - margin:0 et padding:0 → on enlève les espaces que le navigateur ajoute par défaut */
+/* Remise à zéro : on enlève les marges par défaut. box-sizing:border-box = la largeur inclut le padding et la bordure. */
 *{ box-sizing:border-box; margin:0; padding:0; }
-/* Défilement DOUX quand on clique sur un lien d'ancre (#about, #projets…). */
 html{ scroll-behavior:smooth; }
-/* Style par défaut de toute la page (les autres règles le remplacent au besoin). */
 body{
-  font-family: var(--font-body);   /* police par défaut de tout le site */
-  background: var(--cream);   /* fond crème (variable) */
-  color: var(--ink);   /* couleur du texte par défaut */
-  line-height:1.5;   /* interligne = 1,5 × la taille du texte (plus lisible) */
-  -webkit-font-smoothing:antialiased;   /* lissage du texte (visible surtout sur Mac) */
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--ink);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
 }
-/* Les liens héritent la couleur de leur parent (inherit) et n'ont pas de soulignement. */
 a{ color:inherit; text-decoration:none; }
-/* Enlève les puces des listes (le menu de navigation est une liste). */
 ul{ list-style:none; }
-/* Le texte en « strong » est un peu moins gras (600 au lieu de 700). */
 strong{ font-weight:600; }
 
 /* Generic placeholder look — still used for anything you haven't replaced yet. */
-/* Look de « boîte à remplir » (bordure pointillée, fond rayé). Il ne sert plus qu'à la petite flèche ▸ des boutons de projets (.cta-icon). */
 .icon-placeholder{
-  display:inline-flex;   /* flex « en ligne » : permet de centrer le contenu tout en restant dans le texte */
-  align-items:center;   /* centré verticalement */
-  justify-content:center;   /* centré horizontalement */
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
   color:#8a8a8a;
   font-family: var(--font-body);
   font-size:.65rem;
   letter-spacing:.02em;
   text-transform:uppercase;
-  border:1px dashed rgba(150,150,150,.6);   /* bordure en pointillés */
-  background: repeating-linear-gradient(45deg, rgba(150,150,150,.15) 0 8px, rgba(150,150,150,.05) 8px 16px);   /* rayures diagonales (45°) répétées */
+  border:1px dashed rgba(150,150,150,.6);
+  background: repeating-linear-gradient(45deg, rgba(150,150,150,.15) 0 8px, rgba(150,150,150,.05) 8px 16px);
   border-radius:6px;
 }
 
@@ -81,174 +59,140 @@ strong{ font-weight:600; }
    mandala) : chacune remplit son conteneur. La taille/position de chaque
    conteneur reste définie par sa propre classe (hero-corner-icon, about-icon,
    projects-icon, contact-icon, about-pattern, skills-pattern, logo-mark_top). */
-/* RÈGLE POUR TOUTES LES IMAGES DÉCORATIVES. « .decor-icon img » = les <img> placées DANS un élément .decor-icon.
-   L'image remplit son conteneur (100%) : c'est donc le CONTENEUR (ex. .hero-corner-icon) qui décide de la taille. */
+/* Toutes les images décoratives remplissent leur conteneur : c'est le conteneur qui donne la taille. */
 .decor-icon img{
-  display:block;   /* supprime le petit espace sous l'image (les images sont « en ligne » par défaut) */
-  width:100%;   /* remplit la largeur du conteneur */
-  height:100%;   /* remplit la hauteur du conteneur */
-  object-fit:contain;   /* l'image reste ENTIÈRE, sans être déformée ni coupée */
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 
-/* Le petit texte au-dessus des titres (ex. « À PROPOS ») : petit, gras, majuscules, lettres espacées, bleu. */
 .eyebrow{
   font-size:.7rem;
   font-weight:700;
-  letter-spacing:.17em;   /* espace entre les lettres */
-  text-transform:uppercase;   /* tout en majuscules */
+  letter-spacing:.17em;
+  text-transform:uppercase;
   color: var(--blue-accent);
-  margin-bottom:.5rem;   /* espace sous le texte */
+  margin-bottom:.5rem;
 }
-/* Variante de .eyebrow pour les fonds sombres : seule la couleur change (cyan).
-   Principe : une classe de base + une classe « modificateur ». */
 .eyebrow-light{ color: var(--cyan); }
 
-/* Les gros titres de section (À propos, Projets, Compétences). */
 .section-title{
   font-family: var(--font-serif);
   font-weight:800;
-  font-size: clamp(2.2rem, 4.5vw, 3.75rem);   /* clamp : s'adapte à la largeur d'écran, entre 2.2rem et 3.75rem */
-  line-height:1;   /* lignes très serrées */
-  letter-spacing:-.02em;   /* lettres un peu rapprochées (valeur négative) */
+  font-size: clamp(2.2rem, 4.5vw, 3.75rem);
+  line-height:1;
+  letter-spacing:-.02em;
   color: var(--ink);
 }
-/* Le texte entre <em> dans un titre : en italique et plus fin (graisse 400). */
 .section-title em{
   font-style:italic;
   font-weight:400;
   color: var(--ink);
 }
-/* Deux classes SUR LE MÊME ÉLÉMENT (pas d'espace) : version blanche du titre, pour les fonds sombres. */
 .section-title.light{ color: var(--white); }
 
-/* FORME DE BASE de tous les boutons (espacement, police, majuscules, coins arrondis).
-   Les classes .btn-outline et .btn-light ajoutent ensuite la couleur. */
+/* Boutons : .btn = la forme de base ; .btn-outline et .btn-light = les variantes de couleur. */
 .btn{
-  display:inline-block;   /* permet d'avoir du padding vertical tout en restant « en ligne » */
-  padding:.85rem 1.6rem;   /* espace intérieur : haut/bas .85rem, gauche/droite 1.6rem */
+  display:inline-block;
+  padding:.85rem 1.6rem;
   font-family: var(--font-body);
   font-size:.72rem;
   font-weight:700;
   letter-spacing:.05em;
   text-transform:uppercase;
-  border-radius:3px;   /* coins légèrement arrondis */
-  transition:.2s ease;   /* les changements (au survol) se font en douceur sur 0,2 seconde */
+  border-radius:3px;
+  transition:.2s ease;
 }
-/* Bouton « contour » : bordure blanche semi-transparente, texte blanc. */
 .btn-outline{
   border:1px solid rgba(255,255,255,.4);
   color: rgba(255,255,255,.9);
-  backdrop-filter: blur(4px);   /* floute ce qui est DERRIÈRE le bouton (effet verre) */
+  backdrop-filter: blur(4px);
 }
-/* Variante : bordure plus visible (utilisée par « Voir les projets »). */
 .btn-outline.btn-fill{ border-color: rgba(255,255,255,.8); color:#fff; }
-/* Au survol : fond blanc très léger (10%). */
 .btn-outline:hover{ background: rgba(255,255,255,.1); }
-/* Bouton blanc plein (le « Me contacter » du bas) avec une ombre.
-   box-shadow = décalage-x décalage-y flou étalement couleur. */
 .btn-light{ background:#fff; color: var(--ink); box-shadow:0 20px 25px -5px rgba(0,0,0,.15); }
-/* Au survol : gris très clair. */
 .btn-light:hover{ background:#f1f1f1; }
 
 /* ===================================================
    TICKER
 =================================================== */
-/* LE BANDEAU = le CADRE fixe. overflow:hidden cache les mots qui sortent du cadre → effet de « fenêtre ». */
+/* Le bandeau défilant. ticker.js remplit la bande, duplique son contenu, puis ajoute la classe is-ready qui lance l'animation.
+   La bande glisse de 50 % : à la fin, la copie prend la place de l'original → boucle sans coupure. */
 .ticker{
   background: var(--ticker-bg);
   border-top:1px solid rgba(255,255,255,.1);
   border-bottom:1px solid rgba(255,255,255,.1);
-  padding: 13px 0;   /* 13px en haut et en bas, 0 sur les côtés */
-  overflow:hidden;   /* cache ce qui dépasse du cadre */
+  padding: 13px 0;
+  overflow:hidden;
 }
-/* LA BANDE qui défile (remplie par ticker.js). */
 .ticker-track{
-  display:flex; align-items:center; white-space:nowrap;   /* flex : tout sur UNE ligne */
-  width:max-content;   /* aussi large que son contenu (donc bien plus large que l'écran) */
-  will-change: transform;   /* prévient le navigateur qu'on va l'animer (rendu plus fluide) */
+  display:flex; align-items:center; white-space:nowrap;
+  width:max-content;
+  will-change: transform;
 }
 /* L'animation ne démarre qu'une fois .is-ready ajoutée par le JS, c'est-à-dire
    une fois que les polices sont chargées et que la largeur du bandeau est
    stable — sinon le changement de police en cours de route change la largeur
    et ça fait "sauter" le défilement. */
-/* L'animation ne démarre QUE quand le JS ajoute la classe is-ready (après le chargement des polices).
-   animation: nom, durée, vitesse constante (linear), répétitions (infinite). Le JS remplace ensuite la durée de 30s par une durée calculée. */
 .ticker-track.is-ready{
   animation: marquee 30s linear infinite;
 }
-/* Style de chaque mot : petit, majuscules, lettres espacées, blanc à 75%. */
 .ticker-track span{
   font-size:.72rem; letter-spacing:.18em; text-transform:uppercase;
   color: rgba(255,255,255,.75);
 }
-/* La petite puce • entre les mots : bleu ciel, avec de l'espace de chaque côté. */
 .ticker-track .dot{ color: var(--sky); margin: 0 .8rem; }
-/* L'ANIMATION : la bande glisse de 0 à -50% de SA largeur.
-   Comme le JS a DUPLIQUÉ le contenu, à la fin la 2e moitié est exactement à la place de la 1re → la boucle est invisible. */
+/* La bande glisse de 0 à -50 % de sa largeur. */
 @keyframes marquee{
-  /* Début : position normale. */
   from{ transform:translateX(0); }
-  /* Fin : décalée de moitié vers la gauche (translateX négatif = vers la gauche). */
   to{ transform:translateX(-50%); }
 }
-/* ACCESSIBILITÉ : pour les personnes qui ont demandé « moins d'animations » dans leur système.
-   (Attention : cette règle ne gagne pas contre .ticker-track.is-ready — voir les améliorations du guide.) */
 @media (prefers-reduced-motion: reduce){ .ticker-track{ animation:none; } }
 
 /* ===================================================
    ABOUT
 =================================================== */
-/* SECTION À PROPOS. */
+/* Section À propos : grille de 2 colonnes (photo / texte). Les décors sont en position:absolute. */
 .about{
-  position:relative;   /* repère pour les décors en absolute */
-  background: #F5F0E8;   /* fond crème */
-  padding: 8rem 4rem;   /* 8rem en haut/bas, 4rem à gauche/droite */
-  overflow:hidden;   /* cache le motif qui dépasse */
+  position:relative;
+  background: #F5F0E8;
+  padding: 8rem 4rem;
+  overflow:hidden;
 }
-/* Motif décoratif en haut à droite : absolute + right/top le placent ; max-width:40vw l'empêche d'être trop grand ; opacity:.14 = très pâle. */
 .about-pattern{
   position:absolute; right:16px; top:40px;
-  width:420px; height:420px; max-width:40vw; max-height:40vw;   /* 420px, mais jamais plus de 40% de la largeur d'écran */
-  opacity:.14;   /* très pâle pour ne pas gêner la lecture */
+  width:420px; height:420px; max-width:40vw; max-height:40vw;
+  opacity:.14;
 }
-/* Étoile décorative à gauche. top:calc(50% - 150px) = « à la moitié de la hauteur, moins 150px » (calc mélange % et px). */
 .about-icon{
   position:absolute; left:32px; top:calc(50% - 150px);
   width:48px; height:48px; opacity:.2;
 }
-/* Conteneur du contenu : CENTRÉ avec une largeur maximale, et divisé en 2 colonnes (photo / texte). */
+/* Contenu centré (max-width + margin:0 auto), divisé en 2 colonnes 5:7 (grid). */
 .about-inner{
   position:relative;
-  max-width:1024px; margin:0 auto;   /* largeur limitée ET centrée (margin:0 auto : auto répartit l'espace à gauche et à droite) */
-  display:grid; grid-template-columns: 5fr 7fr; gap:3.5rem; align-items:center;   /* grid : 2 colonnes dans les proportions 5:7 (fr = « part ») ; gap = espace entre elles ; align-items:center = centré verticalement */
+  max-width:1024px; margin:0 auto;
+  display:grid; grid-template-columns: 5fr 7fr; gap:3.5rem; align-items:center;
 }
-/* Centre horizontalement le portrait dans sa colonne. */
 .about-portrait-wrap{ display:flex; justify-content:center; }
-/* Le cadre de la photo (288×384px). Le dégradé de fond n'est visible que si le PNG est transparent.
-   overflow:hidden → les coins arrondis découpent l'image. */
 .about-portrait{
-  width:288px; height:384px;   /* taille du cadre */
+  width:288px; height:384px;
   background: linear-gradient(to top, #000 0%, #14172b 50%, #0f172a 100%);  /* visible seulement si l'image a un fond transparent */
   border:1px solid rgba(255,255,255,.1);
   border-radius:4px;
   box-shadow:0 25px 50px -12px rgba(0,0,0,.25);
-  overflow:hidden;   /* les coins arrondis découpent l'image */
+  overflow:hidden;
 }
-/* L'image remplit le cadre : object-fit:cover = elle est agrandie et rognée au besoin (jamais déformée) ;
-   object-position:center top = on garde le HAUT de la photo (ton visage). */
 .about-portrait img{
   display:block;
   width:100%; height:100%;
-  object-fit:cover;   /* remplit le cadre en rognant au besoin */
+  object-fit:cover;
   object-position:center top;   /* change en "center" ou "center 30%" pour recadrer */
 }
-/* Colonne de texte : les éléments sont empilés (flex-direction:column) avec un espace régulier (gap). */
 .about-text{ display:flex; flex-direction:column; gap:1.5rem; }
-/* Les paragraphes. max-width:52ch limite la ligne à environ 52 caractères (plus confortable à lire). */
 .about-copy{ color:#374151; font-size:1rem; line-height:1.6; max-width:52ch; }
-/* Rangée de pastilles : flex-wrap:wrap = elles passent à la ligne si pas assez de place. */
 .about-badges{ display:flex; flex-wrap:wrap; gap:.5rem; }
-/* Une pastille : fond blanc translucide, bordure grise, petit texte en majuscules. */
 .about-badges span{
   background: rgba(255,255,255,.4);
   border:1px solid rgba(156,163,175,.8);
@@ -260,61 +204,42 @@ strong{ font-weight:600; }
 /* ===================================================
    SKILLS
 =================================================== */
-/* SECTION COMPÉTENCES (fond sombre). Même principe que .about : relative + overflow:hidden pour contenir le mandala décoratif. */
+/* Section Compétences : grille 2×2 de catégories. Chaque mot a une classe de style de texte (.skill-serif, .skill-sans…). */
 .skills{ position:relative; background: var(--skills-bg); padding: 9rem 4rem; overflow:hidden; }
-/* Mandala centré : top:50% + left:50% placent son COIN au centre, puis transform:translate(-50%,-50%)
-   le décale de la moitié de sa propre taille → il est parfaitement centré. opacity:.1 = très discret. */
 .skills-pattern{
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);   /* centrage : coin au centre (50 %), puis décalé de la moitié de sa taille (translate) */
   width:600px; height:600px; max-width:60vw; max-height:60vw;
   opacity:.1;
 }
-/* Conteneur centré (1152px max) : flex en colonne avec 5rem d'espace entre le titre et la grille. */
 .skills-inner{ position:relative; max-width:1152px; margin:0 auto; display:flex; flex-direction:column; gap:5rem; }
-/* Grille de 2 colonnes égales (1fr 1fr) avec 4rem d'écart : 4 catégories = 2×2. */
 .skills-grid{ display:grid; grid-template-columns:1fr 1fr; gap:4rem; }
-/* Une catégorie : le label, les noms et les icônes empilés (flex en colonne). */
 .skill-group{ display:flex; flex-direction:column; gap:1rem; }
-/* Le titre doré de la catégorie. display:flex + align-items:center alignent le petit point et le texte. */
 .skill-label{
-  display:flex; align-items:center; gap:.5rem;   /* flex : le point et le texte sur la même ligne */
+  display:flex; align-items:center; gap:.5rem;
   color: var(--gold); font-size:.85rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
 }
-/* Le petit point (8×8px) : border-radius:50% → cercle.
-   (Ce « .dot » est dans .skill-label ; celui du bandeau est dans .ticker-track : deux règles différentes.) */
 .skill-label .dot{ width:8px; height:8px; border-radius:50%; background: var(--amber); display:inline-block; }
-/* Les noms de logiciels côte à côte. align-items:baseline : alignés sur la LIGNE DE BASE du texte (le bas des lettres)
-   même s'ils ont des tailles différentes. flex-wrap:wrap : retour à la ligne si besoin. */
+/* align-items:baseline : les mots de tailles différentes sont alignés sur la ligne de base du texte. */
 .skill-names{ display:flex; align-items:baseline; gap:1rem; flex-wrap:wrap; }
-/* Style de mot n°1 : police serif, gras, grand, blanc. */
 .skill-serif{ font-family: var(--font-serif); font-weight:700; font-size:1.9rem; color:#fff; }
-/* Style de mot n°2 : serif italique, bleu clair. */
 .skill-serif-italic{ font-family: var(--font-serif); font-style:italic; font-size:1.9rem; color:#bfdbfe; }
-/* Style de mot n°3 : serif très gras, plus petit, bleu clair. */
 .skill-serif-bold{ font-family: var(--font-serif); font-weight:800; font-size:1.5rem; color:#bfdbfe; }
-/* Style de mot n°4 : police sans-serif (Plus Jakarta Sans), semi-gras, blanc. */
 .skill-sans{ font-family: var(--font-body); font-weight:600; font-size:1.5rem; color:#fff; }
-/* Style de mot n°5 : sans-serif normal, plus petit, gris clair. */
 .skill-sans-light{ font-family: var(--font-body); font-weight:400; font-size:1.25rem; color:#d1d5db; }
-/* Style de mot n°6 : police à chasse fixe (monospace), pour « C++ ». */
 .skill-mono{ font-family: monospace; font-size:1rem; color:#d1d5db; }
-/* La rangée de logos : alignés (flex) avec un espace entre eux. */
 .skill-icons{ display:flex; align-items:center; gap:1.2rem; padding-top:.5rem; }
 
-/* ANCIEN style de boîte vide : n'est plus utilisé dans le HTML (à supprimer). */
 .skill-icons .icon-placeholder{
   width:34px; height:34px; font-size:.65rem; color:#c9cfe8;
   border-color:rgba(255,255,255,.3); background: rgba(255,255,255,.04);
 }
-/* ANCIEN style (version ronde) : n'est plus utilisé (à supprimer). */
 .skill-icons .icon-placeholder.round{ border-radius:50%; }
 
-/* Chaque logo : une boîte de 48×48px. object-fit:contain → logo entier ; padding → marge interne ; fond et bordure translucides. */
 .skill-icons .skill-icon-img{
   width:48px;
   height:48px;
-  object-fit:contain;   /* logo entier, sans déformation */
-  padding:6px;   /* marge interne */
+  object-fit:contain;
+  padding:6px;
   border-radius:8px;
   background: rgba(255,255,255,.06);
   border:1px solid rgba(255,255,255,.15);
@@ -322,8 +247,6 @@ strong{ font-weight:600; }
 
 /* variante plus large pour un logo dont le wordmark est plus long qu'un carré
    (ex : Unity) — même hauteur que les autres, mais plus de largeur */
-/* Variante pour Unity : même hauteur mais 100px de large.
-   Elle vient APRÈS .skill-icon-img avec la même force → elle l'emporte. */
 .skill-icons .skill-icon-wide{
   width:100px;
   height:48px;
@@ -332,21 +255,18 @@ strong{ font-weight:600; }
 /* ===================================================
    CONTACT
 =================================================== */
-/* SECTION CONTACT : fond très sombre, ligne en haut (border-top), position:relative pour l'étoile décorative. */
+/* Bande de contact : texte à gauche, bouton à droite. */
 .contact{
   position:relative;
   background: var(--contact-bg);
   border-top:1px solid rgba(255,255,255,.1);
   padding: 5rem 4rem;
 }
-/* Étoile décorative en haut à droite (absolute). */
 .contact-icon{ position:absolute; right:48px; top:40px; width:48px; height:48px; opacity:.2; }
-/* Texte à gauche et bouton à droite (space-between) ; flex-wrap:wrap : ils passent l'un sous l'autre s'il manque de place. */
 .contact-inner{
   max-width:1152px; margin:0 auto;
   display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap;
 }
-/* Le gros texte « Prêt à collaborer… » : serif, taille adaptative (clamp). */
 .contact-title{
   font-family: var(--font-serif); font-weight:700;
   font-size: clamp(1.6rem, 3vw, 2.25rem);
@@ -356,39 +276,24 @@ strong{ font-weight:600; }
 /* ===================================================
    FOOTER
 =================================================== */
-/* PIED DE PAGE : fond le plus sombre, fine ligne en haut. */
+/* Pied de page : 3 textes répartis sur la largeur. */
 .site-footer{ background: var(--footer-bg); border-top:1px solid rgba(255,255,255,.05); padding: 2rem 4rem; }
-/* 3 textes répartis sur la largeur (space-between) ; ils passent à la ligne si besoin (wrap). */
 .footer-inner{
   max-width:1280px; margin:0 auto;
-  display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;   /* 3 textes répartis (space-between), retour à la ligne si besoin (wrap) */
+  display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;
 }
-/* Ta signature en arabe : police serif générique, majuscules. */
 .footer-signature{ font-family: serif; color: rgba(255,255,255,.7); font-size:.95rem; letter-spacing:.05em; text-transform:uppercase; }
-/* Le copyright : blanc à 50%, minuscule. */
 .footer-copy{ color: rgba(255,255,255,.5); font-size:.68rem; letter-spacing:.05em; text-transform:uppercase; }
-/* La localisation : blanc à 70%, minuscule. */
 .footer-location{ color: rgba(255,255,255,.7); font-size:.68rem; letter-spacing:.05em; text-transform:uppercase; }
 
 /* ===================================================
    RESPONSIVE
 =================================================== */
-/* RESPONSIVE : règles pour les écrans de 900px ou MOINS (tablette, téléphone). */
+/* Écrans de 900px et moins : une seule colonne, décors cachés, marges réduites. */
 @media (max-width: 900px){
-  /* Moins de marge à gauche et à droite sur petit écran. */
   .about, .skills, .contact, .site-footer{ padding-left:1.5rem; padding-right:1.5rem; }
-  /* Sur petit écran : 1 seule colonne (la photo au-dessus, le texte dessous). */
   .about-inner{ grid-template-columns:1fr; }
-  /* On CACHE les décors (display:none) pour alléger l'écran. */
   .about-pattern, .about-icon, .skills-pattern{ display:none; }
-  /* Sur petit écran : 1 seule colonne. */
   .skills-grid{ grid-template-columns:1fr; }
-  /* Sur petit écran : on empile le texte et le bouton (column), alignés à gauche. */
   .contact-inner{ flex-direction:column; align-items:flex-start; }
-}
-.project-time{
-  color:#e5e7eb;
-  font-size:.72rem;
-  letter-spacing:.05em;
-  margin-bottom:.6rem;
 }

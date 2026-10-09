@@ -1,64 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
-<!-- INDEX.HTML — LA PAGE PRINCIPALE DU SITE (la structure)
-     
-     Un fichier HTML décrit CE QU'IL Y A sur la page, avec des balises : <balise>contenu</balise>.
-     - Une balise peut avoir des attributs : <img src=« photo.png » alt=« description »>
-     - class=« nom » : un « surnom » réutilisable, pour que le CSS puisse mettre l'élément en forme
-     - id=« nom » : un nom UNIQUE (sert aux ancres #nom et au JavaScript)
-     La ligne <!DOCTYPE html> tout en haut dit au navigateur : « c'est du HTML moderne (HTML5) ».
-     La langue (lang=« fr ») aide les lecteurs d'écran, la traduction automatique et Google. -->
 <head>
-<!-- Encodage des caractères : UTF-8 permet d'afficher les accents, les symboles et l'arabe (ياسر). -->
 <meta charset="UTF-8">
-<!-- Pour les téléphones : utiliser la VRAIE largeur de l'écran (sans cette ligne, le site serait minuscule sur mobile). -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Le titre de la page : il apparaît dans l'onglet du navigateur et dans les résultats de Google. -->
 <title>Yasser El Fantroussi — Portfolio</title>
-<!-- Les 2 lignes « preconnect » ouvrent la connexion aux serveurs de polices À L'AVANCE, pour gagner du temps. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Chargement des 3 polices Google : Cinzel (le titre YASSER), Playfair Display (titres élégants) et Plus Jakarta Sans (texte courant).
-     « display=swap » : on affiche le texte tout de suite avec une police de secours, puis on change quand la vraie police arrive. -->
+<!-- Polices Google : Cinzel (titre YASSER), Playfair Display (titres), Plus Jakarta Sans (texte). -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<!-- Mes 3 fichiers CSS. L'ORDRE COMPTE : si deux règles ont la même force, la dernière chargée gagne.
-     header.css = navigation + hero | projet.css = cartes de projets | style.css = tout le reste (variables, boutons, sections…). -->
+<!-- Mes 3 fichiers CSS (l'ordre compte : en cas d'égalité, le dernier gagne). -->
 <link rel="stylesheet" href="css/componant/header.css">
 <link rel="stylesheet" href="css/componant/projet.css">
 <link rel="stylesheet" href="css/componant/style.css">
+<link rel="stylesheet" href="css/componant/animation.css">
 </head>
-<!-- TOUT CE QUI EST VISIBLE sur la page est ici, du haut vers le bas :
-     hero → bandeau → à propos → projets → compétences → contact → pied de page → scripts. -->
 <body>
 
 <!-- ============ HERO ============ -->
-<!-- Une <section> = un grand bloc de la page. Les « class » servent à les cibler dans le CSS (.hero dans header.css). -->
+<!-- Section d'accueil : cercles flous (décor), navigation, nom et boutons. -->
 <section class="hero">
-  <!-- Les 3 cercles flous du fond (leur style est dans header.css).
-       aria-hidden=« true » : élément purement décoratif → les lecteurs d'écran l'ignorent. -->
   <div class="hero-blobs" aria-hidden="true">
     <span class="blob blob-1"></span>
     <span class="blob blob-2"></span>
     <span class="blob blob-3"></span>
   </div>
-  <!-- Couche de dégradés qui donne de la profondeur par-dessus les cercles (décoratif aussi). -->
   <div class="hero-radials" aria-hidden="true"></div>
 
-  <!-- Petite étoile en bas à gauche. DEUX classes : hero-corner-icon (sa position et sa taille) + decor-icon (règle générale : l'image remplit son conteneur).
-       alt=«  » (vide) exprès : une image décorative ne doit rien « annoncer ». -->
   <div class="hero-corner-icon decor-icon" aria-hidden="true">
     <img src="assets/images/star.png" alt="">
   </div>
 
-  <!-- <nav> = la navigation principale du site (balise sémantique : elle dit son rôle aux lecteurs d'écran et à Google). -->
   <nav class="navbar">
-    <!-- Le logo, qui est aussi un lien. href=« # » = reste en haut de la page.
-         aria-label donne un nom au lien (car il ne contient qu'une image). -->
     <a href="#" class="logo-mark_top decor-icon" aria-label="Yasser El Fantroussi">
       <img src="assets/images/yasser_logo.png" alt="Yasser El Fantroussi">
     </a>
-    <!-- Le menu : <ul> = liste, <li> = un élément de la liste, <a> = un lien.
-         href=« #about » est une ANCRE : le clic fait défiler la page jusqu'à l'élément qui a id=« about » (même principe pour #projets, #competences, #contact). -->
+    <!-- Les href=« #about », « #projets »… sont des ancres : le clic défile jusqu'à l'élément qui a cet id. -->
     <ul class="nav-links">
       <li><a href="#about">À propos</a></li>
       <li><a href="#projets">Projets</a></li>
@@ -67,38 +43,31 @@
     </ul>
   </nav>
 
-  <!-- Le texte central du hero : petite ligne, nom, sous-titre, boutons. -->
   <div class="hero-content">
     <p class="hero-eyebrow">Portfolio — Design sonore &amp; multimédia</p>
-    <!-- <h1> = le titre PRINCIPAL de la page (il ne devrait y en avoir qu'un). <h2> = un titre de niveau inférieur. -->
     <h1 class="hero-title">Yasser</h1>
     <h2 class="hero-subtitle">El Fantroussi</h2>
-    <!-- Les 2 boutons. Ce sont des <a> (des liens) mis en forme comme des boutons par les classes « btn btn-outline » (+ « btn-fill » pour le premier). -->
     <div class="hero-actions">
       <a href="#projets" class="btn btn-outline btn-fill">Voir les projets</a>
       <a href="#contact" class="btn btn-outline">Me contacter</a>
     </div>
   </div>
 
-  <!-- Le petit texte tout en bas du hero. -->
   <div class="hero-bottom-row">
     <p class="hero-location">Montréal, QC</p>
   </div>
 </section>
 
 <!-- ============ TICKER ============ -->
+<!-- Bandeau défilant. La bande (id=« ticker-track ») est vide : js/ticker.js la remplit. -->
 <!-- Rempli par js/ticker.js à partir du tableau TICKER_WORDS, au lieu de 20 <span> écrits à la main -->
-<!-- LE BANDEAU DÉFILANT : « ticker » = le cadre fixe ; « ticker-track » = la longue bande qui défile.
-     La bande est VIDE ici : js/ticker.js la remplit.
-     elle a un id (unique) car le JS la retrouve avec getElementById(« ticker-track »). -->
 <div class="ticker">
   <div class="ticker-track" id="ticker-track"></div>
 </div>
 
 <!-- ============ ABOUT ============ -->
-<!-- SECTION À PROPOS. id=« about » : c'est la destination du lien de menu « À propos » (voir les ancres plus haut). -->
+<!-- Section À propos : photo à gauche, texte à droite (2 colonnes en CSS). -->
 <section class="about" id="about">
-  <!-- Deux décors (motif + étoile), très pâles, positionnés en absolute par le CSS. -->
   <div class="about-pattern decor-icon" aria-hidden="true">
     <img src="assets/images/patern.png" alt="">
   </div>
@@ -106,19 +75,15 @@
     <img src="assets/images/star.png" alt="">
   </div>
 
-  <!-- Le conteneur centré, divisé en 2 colonnes par le CSS (grid) : la photo à gauche, le texte à droite. -->
   <div class="about-inner">
-    <!-- Colonne de gauche : le cadre de la photo. Ici le alt est REMPLI : l'image a un sens (c'est toi), donc on la décrit. -->
     <div class="about-portrait-wrap">
       <div class="about-portrait">
         <img src="assets/images/self_portrait.png" alt="Portrait de Yasser El Fantroussi">
       </div>
     </div>
 
-    <!-- Colonne de droite : tout le texte, empilé verticalement. -->
     <div class="about-text">
       <p class="eyebrow">À propos</p>
-      <!-- Le titre. <br> = retour à la ligne forcé ; <em> = texte mis en évidence (italique, voir .section-title em). -->
       <h3 class="section-title">
         Créer à<br>
         l'intersection<br>
@@ -135,7 +100,6 @@
         des expériences sonores et visuelles contemporaines qui allient tradition et
         innovation.
       </p>
-      <!-- Les pastilles (lieu, disponibilité…) : chaque <span> est une pastille. -->
       <div class="about-badges">
         <span>Laval, QC</span>
         <span>Disponible </span>
@@ -146,10 +110,9 @@
 </section>
 
 <!-- ============ PROJECTS ============ -->
-<!-- SECTION PROJETS. id=« projets » = destination du lien « Projets ». -->
+<!-- Section Projets : le conteneur ci-dessous est vide, js/main.js y place les cartes lues dans data/projects.json. -->
 <section class="projects" id="projets">
   <div class="projects-inner">
-    <!-- En-tête : le titre à gauche et l'étoile décorative à droite. -->
     <div class="projects-header">
       <div>
         <p class="eyebrow">Travaux sélectionnés</p>
@@ -161,14 +124,13 @@
     </div>
 
     <!-- Rempli dynamiquement par js/main.js à partir de data/projects.json -->
-    <!-- CONTENEUR VIDE des cartes. Deux classes, deux rôles : « project-list » sert au CSS (la mise en page),
-         « container-projets » sert au JS (document.querySelector('.container-projets') dans main.js). -->
+    <!-- Deux classes : project-list pour le CSS, container-projets pour le JS. -->
     <div class="project-list container-projets"></div>
   </div>
 </section>
 
 <!-- ============ SKILLS ============ -->
-<!-- SECTION COMPÉTENCES. 4 catégories (« skill-group »), toutes construites sur le même modèle. -->
+<!-- Section Compétences : 4 catégories qui ont toutes la même structure (titre, noms, logos). -->
 <section class="skills" id="competences">
   <div class="skills-pattern decor-icon" aria-hidden="true">
     <img src="assets/images/MoroccanMandala.png" alt="">
@@ -178,19 +140,14 @@
     <p class="eyebrow eyebrow-light">Outils &amp; savoir-faire</p>
     <h2 class="section-title light">Compétences</h2>
 
-    <!-- Grille de 2 colonnes (voir CSS) : les 4 catégories se placent en 2×2. -->
     <div class="skills-grid">
 
-      <!-- UNE CATÉGORIE. Même structure pour les 4 : un titre (skill-label), les noms de logiciels (skill-names) et leurs logos (skill-icons). -->
       <div class="skill-group">
-        <!-- Le titre de la catégorie. Le <span class=« dot »> est le petit point devant le texte (dessiné par le CSS). -->
         <p class="skill-label"><span class="dot"></span>Son &amp; Audio</p>
-        <!-- Les noms : chaque <span> a une classe de style différente (serif, italique, sans-serif…) pour varier la typographie. -->
         <div class="skill-names">
           <span class="skill-serif">Max</span>
           <span class="skill-serif-italic">Reaper</span>
         </div>
-        <!-- Les logos : une balise <img> par logo (src = le chemin du fichier ; alt = le nom du logiciel, pour l'accessibilité). -->
         <div class="skill-icons">
           <img src="assets/images/logo_max8.png" alt="Max" class="skill-icon-img">
           <img src="assets/images/logo_reaper.png" alt="Reaper" class="skill-icon-img">
@@ -235,7 +192,6 @@
           <span class="skill-serif-bold">Narrative Design</span>
         </div>
         <div class="skill-icons">
-          <!-- Le logo Unity : une classe de plus (skill-icon-wide) car il est plus large que les autres. -->
           <img src="assets/images/logo_unity.png" alt="Unity" class="skill-icon-img skill-icon-wide">
         </div>
       </div>
@@ -245,7 +201,7 @@
 </section>
 
 <!-- ============ CONTACT CTA ============ -->
-<!-- SECTION CONTACT (id=« contact » = destination du lien « Contact »). -->
+<!-- Bande de contact : « mailto: » ouvre le logiciel de courriel (à remplacer par ta vraie adresse). -->
 <section class="contact" id="contact">
   <div class="contact-icon decor-icon" aria-hidden="true">
     <img src="assets/images/star.png" alt="">
@@ -255,13 +211,12 @@
       <p class="eyebrow eyebrow-light">Collaboration &amp; opportunités</p>
       <h3 class="contact-title">Prêt à collaborer sur de futurs projets</h3>
     </div>
-    <!-- « mailto: » ouvre le logiciel de courriel avec cette adresse déjà remplie. (À remplacer par ta vraie adresse !) -->
     <a href="mailto:hello@example.com" class="btn btn-light">Me contacter</a>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
-<!-- <footer> = le pied de page : signature en arabe, copyright et localisation. -->
+<!-- Pied de page : signature, copyright, localisation. -->
 <footer class="site-footer">
   <div class="footer-inner">
     <span class="footer-signature">ياسر</span>
@@ -270,9 +225,9 @@
   </div>
 </footer>
 
-<!-- LES SCRIPTS, tout en bas du <body> : le JS cherche des éléments (#ticker-track, .container-projets),
-     il faut donc que le HTML existe déjà quand il s'exécute. L'ordre compte : ticker.js d'abord, puis main.js. -->
+<!-- Les scripts sont tout en bas pour que le HTML existe déjà quand le JS cherche ses éléments. -->
 <script src="js/ticker.js"></script>
 <script src="js/main.js"></script>
+<script src="js/animation.js"></script>
 </body>
 </html>

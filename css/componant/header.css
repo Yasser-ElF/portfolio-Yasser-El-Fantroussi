@@ -1,98 +1,62 @@
-/* =========================================================
-   header.css — LA NAVIGATION + LA SECTION D'ACCUEIL (le « hero »)
-
-   Contenu : le fond (cercles flous), la barre de navigation,
-   le nom « YASSER » / « El Fantroussi », les boutons et le texte du bas.
-   Les variables (--hero-bg, --font-display…) sont définies dans style.css.
-
-   COMMENT LIRE UN FICHIER CSS (mini-lexique)
-   - Une règle : sélecteur { propriété: valeur; }  →  « qui » on stylise { « quoi » changer: « comment »; }
-   - .nom = une CLASSE (class="nom" dans le HTML) ; #nom = un id ; a = toutes les balises <a>
-   - .a .b (avec espace) = un .b à l'INTÉRIEUR d'un .a ;  .a.b (sans espace) = un élément qui a les DEUX classes
-   - .a, .b (avec virgule) = les mêmes règles pour les deux
-   - Quand deux règles se contredisent, la plus « spécifique » gagne, puis la plus basse dans le fichier.
-   ========================================================= */
+/* header.css — navbar + section hero */
 
 /* ===================================================
    HERO
 =================================================== */
-/* LA SECTION D'ACCUEIL : le grand bloc bleu en haut de la page.
-   C'est le « parent » de tout ce qu'il contient : cercles, navigation, texte. */
+/* Le grand bloc d'accueil : fond (cercles flous), barre de navigation, nom et boutons.
+   Tout est empilé en couches avec position:absolute + z-index. */
 .hero{
-  position:relative;   /* repère de position pour les enfants en position:absolute */
+  position:relative;
   height: clamp(640px, 100vh, 800px);   /* 800px max, 640px min, sinon la hauteur de l'écran */
-  background: var(--hero-bg);   /* couleur de fond (variable définie dans style.css) */
-  overflow:hidden;   /* cache ce qui dépasse (les cercles débordent exprès) */
+  background: var(--hero-bg);
+  overflow:hidden;
 }
 
 /* Cercles flous du fond */
-/* COUCHE DES CERCLES FLOUS (leur contenant) :
-   - position:absolute + inset:0 → la couche couvre toute la section
-   - mix-blend-mode:screen → les couleurs s'ADDITIONNENT comme des lumières (les zones qui se chevauchent s'éclaircissent)
-   - opacity:.75 → un peu transparente
-   - pointer-events:none → les clics passent À TRAVERS (sinon elle bloquerait les boutons) */
+/* mix-blend-mode:screen : les couleurs s'additionnent comme des lumières. pointer-events:none : les clics traversent la couche. */
 .hero-blobs{ position:absolute; inset:0; mix-blend-mode:screen; opacity:.75; pointer-events:none; }
-/* Forme commune des 3 cercles : border-radius:50% = cercle parfait ; filter:blur(55px) = très flou. */
 .blob{ position:absolute; border-radius:50%; filter:blur(55px); }
-/* Cercle 1 (lavande), en haut au centre. left/top le placent en pixels ; un top NÉGATIF le fait déborder en haut de l'écran. */
 .blob-1{ width:650px; height:650px; left:320px; top:-160px; background:linear-gradient(45deg,#4a4f7a,#8a87a8); }    /* lavande */
-/* Cercle 2 (mauve), en bas à droite. right/bottom = distance depuis les bords droit et bas.
-   Son flou (65px) remplace celui de .blob car il vient après. */
 .blob-2{ width:550px; height:550px; right:40px; bottom:40px; filter:blur(65px); background:linear-gradient(135deg,#6e5f6e,#8a7078); }  /* mauve */
-/* Cercle 3 (bleu cyan), à gauche. Un left NÉGATIF le fait déborder à gauche. */
 .blob-3{ width:450px; height:450px; left:-80px; top:267px; background:linear-gradient(90deg,#0a5fa0,#1e7fc4); }      /* bleu cyan */
 
 /* Dégradés de profondeur par-dessus les cercles */
-/* Couche de dégradés « de profondeur » par-dessus les cercles.
-   Chaque radial-gradient dessine une grande tache ronde : (forme taille at position, couleur au centre, transparent à X%). */
 .hero-radials{
-  position:absolute; inset:0; pointer-events:none;   /* couvre toute la section */
-  background:   /* 4 dégradés empilés, séparés par des virgules */
+  position:absolute; inset:0; pointer-events:none;
+  background:
     radial-gradient(circle 800px  at 640px 320px,  rgba(30,70,160,.6),  transparent 60%),
     radial-gradient(circle 1260px at 192px 160px,  rgba(20,45,110,.8),  transparent 45%),
     radial-gradient(circle 1190px at 1088px 480px, rgba(45,95,200,.7),  transparent 50%),
     radial-gradient(circle 934px  at 640px 680px,  rgba(10,20,50,.9),   transparent 70%);
 }
 
-/* Petite étoile décorative en bas à gauche : position:absolute + bottom/left ; z-index:2 la place devant le fond ; opacity:.3 la rend discrète. */
 .hero-corner-icon{ position:absolute; bottom:64px; left:24px; z-index:2; width:40px; height:40px; opacity:.3; }
 
 /* Navigation */
-/* BARRE DE NAVIGATION : le logo à gauche, les liens à droite. */
 .navbar{
-  position:relative; z-index:10;   /* nécessaire pour que z-index fonctionne */
-  display:flex; align-items:center; justify-content:space-between;   /* flex : logo et menu côte à côte ; space-between = un à chaque bout ; center = alignés verticalement */
-  padding: 2rem 4rem 0;   /* haut 2rem | gauche et droite 4rem | bas 0 */
+  position:relative; z-index:10;
+  display:flex; align-items:center; justify-content:space-between;   /* logo à gauche, liens à droite (space-between) */
+  padding: 2rem 4rem 0;
 }
-/* Taille du logo (88×88px). inline-flex permet de donner une taille au lien ET à l'image qu'il contient. */
 .logo-mark_top{ display:inline-flex; width:88px; height:88px; }
-/* La liste des liens du menu : flex = alignés horizontalement ; gap = espace entre eux. */
 .nav-links{ display:flex; gap:3rem; }
-/* Style des liens : blancs, petits, gras, majuscules, lettres espacées. */
 .nav-links a{ color:#fff; font-size:.82rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
-/* Au survol de la souris : le lien devient un peu transparent. */
-.nav-links a:hover{ color: var(--gold); }
+.nav-links a:hover{ opacity:.7; }
 
 /* Texte central */
-/* LE TEXTE CENTRAL : petite ligne, nom, sous-titre et boutons. */
 .hero-content{
-  position:relative; z-index:5;   /* z-index:5 → passe DEVANT les cercles */
-  display:flex; flex-direction:column; align-items:center; text-align:center;   /* empilé en colonne ; align-items:center = centré horizontalement ; text-align:center = texte centré */
-  padding: 9.8rem 1rem;   /* le grand padding du haut (9.8rem) pousse le texte vers le milieu de la section */
+  position:relative; z-index:5;
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+  padding: 9.8rem 1rem;   /* le grand padding du haut pousse le texte vers le milieu */
 }
-/* La petite ligne au-dessus du nom : minuscule, espacée, majuscules, lavande pâle. */
 .hero-eyebrow{
-  color: rgba(206,215,250,.92);   /* couleur avec transparence (rgba : rouge, vert, bleu, opacité) */
+  color: rgba(206,215,250,.92);
   font-size:.72rem; font-weight:600; letter-spacing:.26em;
   text-transform:uppercase; margin-bottom:1rem;
 }
 
 /* Titre + sous-titre : texte rempli par un dégradé (réglages communs) */
-/* RÈGLES COMMUNES au nom et au sous-titre : LE TEXTE REMPLI PAR UN DÉGRADÉ.
-   - background-clip:text → le fond (le dégradé) n'apparaît qu'à l'intérieur des lettres
-   - color:transparent → on voit le fond au travers des lettres
-   - -webkit-… = version pour certains navigateurs
-   - line-height:1 → lignes très serrées */
+/* Texte en dégradé : le fond n'est visible qu'à l'intérieur des lettres (background-clip:text + color:transparent). */
 .hero-title,
 .hero-subtitle{
   line-height:1;
@@ -100,42 +64,34 @@
   background-clip:text;
   color:transparent;
 }
-/* Le nom « YASSER » : police Cinzel, très grand mais adaptatif, majuscules, dégradé blanc → bleu.
-   On écrit « background-image » (et pas « background ») car le raccourci « background » remettrait background-clip à zéro. */
 .hero-title{
   font-family: var(--font-display);
   font-weight:900;
-  font-size: clamp(3.5rem, 9vw, 8rem);   /* clamp(min, idéal, max) : 9% de la largeur d'écran, mais toujours entre 3.5rem et 8rem */
+  font-size: clamp(3.5rem, 9vw, 8rem);
   letter-spacing:-.02em;
   text-transform:uppercase;
-  background-image: linear-gradient(180deg,#fff 12%,#dfe4fb 42%,#fff 54%,#9eaee8 82%,#5a6bb0 100%);   /* dégradé vertical (180deg = de haut en bas) ; chaque couleur a une position en % */
-  filter: drop-shadow(0 4px 12px rgba(70,95,200,.5));   /* drop-shadow = ombre qui suit la FORME des lettres (box-shadow suivrait le rectangle) */
+  background-image: linear-gradient(180deg,#fff 12%,#dfe4fb 42%,#fff 54%,#9eaee8 82%,#5a6bb0 100%);
+  filter: drop-shadow(0 4px 12px rgba(70,95,200,.5));   /* drop-shadow = ombre qui suit la forme des lettres */
 }
-/* Le sous-titre « El Fantroussi » : Playfair Display italique gras, dégradé bleuté plus clair. */
 .hero-subtitle{
   font-family: var(--font-serif);
   font-style:italic;
   font-weight:700;
   font-size: clamp(2rem, 5vw, 4.5rem);
-  background-image: linear-gradient(180deg,#eef1ff 0%,#aebcf0 50%,#6f82cf 100%);   /* dégradé vertical bleuté */
-  filter: drop-shadow(0 3px 10px rgba(40,60,150,.45));   /* ombre qui suit la forme des lettres */
+  background-image: linear-gradient(180deg,#eef1ff 0%,#aebcf0 50%,#6f82cf 100%);
+  filter: drop-shadow(0 3px 10px rgba(40,60,150,.45));
 }
 
-/* Les 2 boutons côte à côte (flex) avec 1rem d'espace (gap) ; margin-top = espace au-dessus. */
 .hero-actions{ display:flex; gap:1rem; margin-top:2.5rem; }
 
-/* Rangée en bas du hero : absolute + bottom:64px la colle en bas ; left:0 et right:0 = toute la largeur ; z-index:5 = au-dessus du fond. */
 .hero-bottom-row{ position:absolute; left:0; right:0; bottom:64px; z-index:5; padding:0 4rem; }
-/* Le petit texte « Montréal, QC » : blanc à 40% d'opacité, minuscule, espacé. */
 .hero-location{ color:rgba(255,255,255,.4); font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; }
 
 /* ===================================================
    RESPONSIVE
 =================================================== */
-/* RESPONSIVE : ces règles ne s'appliquent que si la fenêtre fait 900px de large ou MOINS (tablette, téléphone). */
+/* Petits écrans (900px et moins) : moins de marges sur les côtés. */
 @media (max-width: 900px){
-  /* padding-inline = padding à gauche + à droite : moins de marge sur petit écran. */
   .navbar, .hero-bottom-row{ padding-inline:1.5rem; }
-  /* Sur petit écran : liens plus rapprochés. */
   .nav-links{ gap:1.2rem; }
 }
