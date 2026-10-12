@@ -28,6 +28,7 @@
   animation: spin 80s linear infinite;   /* plus grand = plus lent */
   will-change: transform;
 }
+
 .decor-icon img{
   transform-origin: 50% 50%;
   animation: spin 80s linear infinite;   /* plus grand = plus lent */

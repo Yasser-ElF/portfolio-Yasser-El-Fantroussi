@@ -218,3 +218,77 @@
   .projects{ padding-left:1.5rem; padding-right:1.5rem; }
   .project-body{ padding:2rem; max-width:100%; }
 }
+/* ===================================================
+   PROJETS — PROCESSUS DU PROJET
+=================================================== */
+/* Liste d'étapes numérotées avec une ligne verticale. Les images sont sous le texte de chaque étape. */
+.process-list{
+  list-style:none;
+  counter-reset: step;
+  position:relative;
+  display:flex; flex-direction:column; gap:2.25rem;
+  padding-left:3rem;
+  margin-top:1rem;
+}
+.process-list::before{
+  content:"";
+  position:absolute; left:15px; top:8px; bottom:8px;
+  width:1px; background: rgba(255,255,255,.2);
+}
+.process-step{ position:relative; display:flex; flex-direction:column; gap:.6rem; }
+.process-step::before{
+  counter-increment: step;
+  content: counter(step);
+  position:absolute; left:-3rem; top:-.15rem;
+  width:32px; height:32px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  border:1px solid var(--gold); color: var(--gold);
+  background: rgba(8,12,24,.95);
+  font-size:.75rem; font-weight:700;
+}
+.process-step-title{
+  font-family: var(--font-serif);
+  font-weight:700;
+  font-size:1.3rem;
+  line-height:1.2;
+  color:#fff;
+}
+
+/* Images d'une étape : 1 ou 2 par ligne */
+.process-figures{
+  display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem;
+  margin-top:.75rem;
+}
+.process-figures[data-count="1"]{ grid-template-columns: minmax(0, 560px); }
+.process-figure{
+  border-radius:4px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.04);
+}
+.process-figure img{ display:block; width:100%; height:auto; }
+.process-figure figcaption{
+  padding:.5rem .75rem;
+  font-size:.7rem; letter-spacing:.05em; color: rgba(255,255,255,.6);
+}
+
+/* Image pas encore ajoutée : cadre en pointillés */
+.process-figure.is-missing{
+  aspect-ratio:16 / 9;
+  display:flex; align-items:center; justify-content:center;
+  border-style:dashed;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 8px, rgba(255,255,255,.02) 8px 16px);
+}
+.process-figure.is-missing img{ display:none; }
+.process-figure.is-missing::before{
+  content:"Image à ajouter";
+  color: rgba(255,255,255,.4);
+  font-size:.7rem; letter-spacing:.08em; text-transform:uppercase;
+}
+
+@media (max-width: 900px){
+  .process-list{ padding-left:2.5rem; }
+  .process-step::before{ left:-2.5rem; }
+  .process-figures,
+  .process-figures[data-count="1"]{ grid-template-columns:1fr; }
+}

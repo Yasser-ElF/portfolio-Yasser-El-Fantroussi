@@ -41,7 +41,7 @@
 .logo-mark_top{ display:inline-flex; width:88px; height:88px; }
 .nav-links{ display:flex; gap:3rem; }
 .nav-links a{ color:#fff; font-size:.82rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
-.nav-links a:hover{ opacity:.7; }
+.nav-links a:hover{ color:#aebcf0; }
 
 /* Texte central */
 .hero-content{

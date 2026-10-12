@@ -7,17 +7,11 @@
     "title": "La Chasse",
     "role": "Rôle : créateur et concepteur (individuel)",
     "desc": "Performance audiovisuelle immersive explorant la thalassophobie et les abysses océaniques. Intègre une ambiance sonore sous-marine anxiogène avec des sons de créatures et créations procédurales gérées sous Max, couplées à une animation 3D Maya et TouchDesigner diffusée sur projecteur et multi-diffusion acoustique.",
-    "tags": [
-      "Max",
-      "TouchDesigner",
-      "Maya",
-      "Spatial Audio",
-      "Animation 3D"
-    ],
+    "tags": ["Max", "TouchDesigner", "Maya", "Spatial Audio", "Animation 3D"],
     "ctaLabel": "Voir sur YouTube",
-    "ctaHref": "#",
+    "ctaHref": "https://youtu.be/zx5qwowoRbc",
     "details": {
-      "dates": "Dates à ajouter",
+      "dates": "04/23/2026",
       "brief": "Créer une performance audiovisuelle créative comprenant un minimum de quatre scènes, dont une scène utilisant l'animation 3D réalisée sans TouchDesigner. La performance devait aussi intégrer une ambiance sonore et des effets sonores créés et gérés avec Max.",
       "images": [
         "assets/videos/audivis_gif1.mp4",
@@ -26,7 +20,7 @@
         "assets/videos/audivis_gif4.mp4",
         "assets/videos/audivis_gif5.mp4"
       ],
-      "link": "#",
+      "link": "https://youtu.be/zx5qwowoRbc",
       "linkLabel": "Voir le projet"
     }
   },
@@ -38,24 +32,18 @@
     "title": "Scène réactive",
     "role": "Rôle : créateur et concepteur (individuel)",
     "desc": "Jeu de plateforme interactif 2D au style cartoon inspiré des classiques rétro. Le joueur navigue à travers trois niveaux dynamiques en récoltant des fruits et en évitant scies et pics avec gestion de vies et mécaniques de saut précises. Échantillons sonores et animations réactives.",
-    "tags": [
-      "Godot Engine",
-      "Godot Script",
-      "VS Code",
-      "GitHub",
-      "Game Audio 2D"
-    ],
+    "tags": ["Godot Engine", "Godot Script", "VS Code", "GitHub", "Game Audio 2D"],
     "ctaLabel": "GitHub — TP4_Yasser",
-    "ctaHref": "#",
+    "ctaHref": "https://yasser-elf.github.io/TP4_Yasser/",
     "details": {
-      "dates": "Dates à ajouter",
+      "dates": "11/28/2025",
       "brief": "Réaliser une expérience ludique et interactive comprenant des images et des échantillons sonores, dans laquelle l'interacteur progresse en accomplissant différentes actions.",
       "images": [
         "assets/videos/2d_gif1.mp4",
         "assets/videos/2d_gif2.mp4",
         "assets/videos/2d_gif3.mp4"
       ],
-      "link": "#",
+      "link": "https://yasser-elf.github.io/TP4_Yasser/",
       "linkLabel": "Voir le projet"
     }
   },
@@ -67,16 +55,11 @@
     "title": "Disparaître",
     "role": "Rôle : réalisateur, montage visuel et sonore, caméraman (en équipe avec Ben Fradj, Adam Elchoueiri, Karim Fadi Sulici, Vasile Dominique, Tyler Richard)",
     "desc": "Court métrage d'auteur en stop motion explorant la solitude et la lente érosion des troubles psychologiques et émotionnels. Conception sonore organique intégrale réalisée en studio Foley et montage cinématographique sous DaVinci Resolve pour traduire la transformation et le basculement intérieur.",
-    "tags": [
-      "DaVinci Resolve",
-      "Stop Motion",
-      "Sound Design",
-      "Montage Vidéo"
-    ],
+    "tags": ["DaVinci Resolve", "Stop Motion", "Sound Design", "Montage Vidéo"],
     "ctaLabel": "Voir sur YouTube",
-    "ctaHref": "#",
+    "ctaHref": "https://youtu.be/yRWwUVZQnKA",
     "details": {
-      "dates": "Dates à ajouter",
+      "dates": "12/08/2025",
       "brief": "Créer une installation immersive ou une présentation vidéo mosaïque en utilisant des éléments visuels et sonores pour raconter une histoire. Filmer nos propres séquences, réaliser l'ensemble de la vidéo en stop motion et créer une bande sonore composée exclusivement de sons enregistrés en studio Foley.",
       "images": [
         "assets/videos/gif_1.mp4",
@@ -84,7 +67,7 @@
         "assets/videos/gif_3.mp4",
         "assets/videos/gif_4.mp4"
       ],
-      "link": "#",
+      "link": "https://youtu.be/yRWwUVZQnKA",
       "linkLabel": "Voir le projet"
     }
   },
@@ -93,31 +76,60 @@
     "num": "04",
     "theme": 4,
     "category": "Projet académique — Publicité web & design graphique | Cours : Design graphique",
-    "title": "Pub Web : Ramadan Kareem — Food Menu (50 % OFF)",
+    "title": "Pub Web : Ramadan Kareem Food Menu (50 % OFF)",
     "role": "Rôle : concepteur et créateur (individuel)",
-    "time": "Temps de réalisation : 1 semaine",
     "desc": "Campagne publicitaire digitale multiformat (post Instagram et bannières web adaptatives) pour un restaurant célébrant le Ramadan avec une promotion de 50 %. Composition visuelle épurée et hiérarchisée intégrant accroche percutante, visuel gastronomique et call-to-action interactif orienté conversion.",
-    "tags": [
-      "Figma",
-      "Direction Artistique",
-      "UI/UX",
-      "Campagne Digitale",
-      "Branding"
-    ],
-    "ctaLabel": "Consulter la campagne",
-    "ctaHref": "#",
+    "tags": ["Figma", "Direction Artistique", "UI/UX", "Campagne Digitale", "Branding"],
+    "ctaLabel": "Consulter le projet sur Figma",
+    "ctaHref": "https://www.figma.com/design/iFI3OPsrQLpp1bZQXHv0OE/Yasser_El_Fantroussi?node-id=0-1&t=LiZCGEmyUsC7oU8I-1",
     "details": {
-      "dates": "Dates à ajouter",
+      "dates": "07/03/2025",
       "brief": "Créer une campagne de publicité Web en plusieurs formats pour présenter un sujet qui nous passionne, tout en respectant le principe de simplicité. Trois compositions différentes et harmonieuses : un post Instagram et deux bannières Web, chacune avec un slogan ou une accroche, un élément visuel et un bouton permettant de passer à l'action.",
       "images": [
         "assets/images/instagrame.png",
         "assets/images/banniere_web.png",
         "assets/images/bannier_web_peti.png"
-        
       ],
-      "link": "#",
-      "linkLabel": "Voir le projet"
-      
-    }
+      "link": "https://www.figma.com/design/iFI3OPsrQLpp1bZQXHv0OE/Yasser_El_Fantroussi?node-id=0-1&t=LiZCGEmyUsC7oU8I-1",
+      "linkLabel": "Voir le projet sur Figma"
+    },
+    "process": [
+      {
+        "title": "Étape 1 : Création du moodboard",
+        "text": "Pour commencer, j'ai créé un moodboard pour définir l'ambiance générale de mon projet. J'ai rassemblé plusieurs images en lien avec le Ramadan, la nourriture et la publicité. J'ai aussi commencé à réfléchir aux couleurs, aux styles, aux formes et aux typographies que je pourrais utiliser. Cette étape m'a aidé à avoir une première idée de la direction que je voulais prendre.",
+        "images": ["assets/images/planche_style.png"]
+      },
+      {
+        "title": "Étape 2 : Création de la planche d'inspiration",
+        "text": "Après le moodboard, j'ai créé une planche d'inspiration plus précise. Elle m'a servi de guide pour commencer mon projet. J'y ai ajouté les polices, les couleurs, le style graphique, le nom du restaurant, des exemples de photos, des exemples de publicités et les éléments décoratifs que je voulais utiliser. Cette étape m'a permis de mieux définir le style final de ma publicité.",
+        "images": ["assets/images/planche_inspi.png"]
+      },
+      {
+        "title": "Étape 3 : Recherche de publicités similaires",
+        "text": "Avant de commencer ma publicité, j'ai regardé plusieurs publicités sur la nourriture et les promotions pour trouver de l'inspiration. J'ai observé comment les autres publicités utilisent les photos de nourriture, les gros textes, les couleurs, les rabais et les boutons pour attirer l'attention. Ces recherches m'ont donné des idées pour présenter mon offre de 50 % de rabais, tout en créant mon propre design.",
+        "images": ["assets/images/pub1.png", "assets/images/pub2.png"]
+      },
+      {
+        "title": "Étape 4 : Première création dans Figma",
+        "text": "Après mes recherches, j'ai commencé à créer ma publicité dans Figma. Je me suis basé sur mon moodboard, ma planche d'inspiration et les idées que j'avais trouvées. J'ai commencé à placer les différents éléments comme la photo du plat, le texte de la promotion, le nom du restaurant, les informations, le bouton « En savoir plus » et les décorations. J'ai ensuite utilisé ma créativité pour créer une composition qui correspondait à mon idée du projet."
+      },
+      {
+        "title": "Étape 5 : Développement de la composition",
+        "text": "Après ma première version, j'ai essayé différentes façons de placer les éléments pour trouver une composition qui fonctionnait bien. J'ai changé la taille des textes, la position des images, les couleurs et les espaces. Je voulais garder un design simple, mais aussi assez intéressant pour attirer l'attention sur la promotion. J'ai aussi pris en compte les commentaires et les conseils de mon professeur pour améliorer mon design."
+      },
+      {
+        "title": "Étape 6 : Adaptation aux trois formats",
+        "text": "Une fois mon design principal terminé, je l'ai adapté aux trois formats demandés : un post Instagram et deux bannières Web. J'ai gardé les mêmes couleurs, le même style et les mêmes éléments pour que les trois publicités restent cohérentes. J'ai cependant changé leur disposition pour qu'elles fonctionnent bien dans chaque format.",
+        "images": ["assets/images/insta_maquet.png", "assets/images/maquete_web_G&P.png"]
+      },
+      {
+        "title": "Étape 7 : Corrections avec les commentaires du professeur",
+        "text": "J'ai ensuite montré mon travail à mon professeur pour avoir des commentaires. Grâce à ses conseils, j'ai fait plusieurs corrections au niveau de l'équilibre, de la lisibilité, de la hiérarchie des informations et du placement des éléments. Cela m'a permis d'améliorer mon projet et de voir certains détails que je pouvais encore modifier."
+      },
+      {
+        "title": "Étape 8 : Version finale",
+        "text": "Après les dernières corrections, j'ai finalisé les trois publicités dans Figma. J'ai vérifié que toutes les informations importantes étaient présentes et que les trois formats avaient le même style. Le résultat final est une campagne publicitaire sur le thème du Ramadan, avec une promotion de 50 % de rabais sur le menu du restaurant. Ce projet est le résultat de mes recherches, de mes inspirations, de ma créativité et des conseils de mon professeur."
+      }
+    ]
   }
 ]
