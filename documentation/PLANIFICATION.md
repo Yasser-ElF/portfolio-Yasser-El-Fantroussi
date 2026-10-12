@@ -97,10 +97,10 @@ J’ai créé une performance audiovisuelle qui évoque la thalassophobie, en me
 **Lien vers la documentation du projet :**[la chasse lien youtube](https://youtu.be/zx5qwowoRbc) 
 <p>
 
-  <img src="medias/difusion_1.png" width="450">
-  <img src="medias/difusion_2.png" width="450">
-  <img src="medias/difusion_3.png" width="450">
-  <img src="medias/difusion_4.png" width="450">
+  <img src="../assets/images/difusion_1.png" width="450">
+  <img src="../assets/images/difusion_2.png" width="450">
+  <img src="../assets/images/difusion_3.png" width="450">
+  <img src="../assets/images/difusion_4.png" width="450">
 
 </p>
 ---
@@ -143,10 +143,10 @@ J’ai créé un jeu de plateforme 2D avec un style cartoon qui rappelle les jeu
 **Lien vers la documentation du projet :**[GitHub — TP4_Yasser](https://github.com/Yasser-ElF/TP4_Yasser/tree/main)
 <p>
 
-  <img src="medias/jeux_scene0.png" width="450">
-  <img src="medias/jeux_scene1.png" width="450">
-  <img src="medias/jeux_scene2.png" width="450">
-  <img src="medias/jeux_scene3.png" width="450">
+  <img src="../assets/images/jeux_scene0.png" width="450">
+  <img src="../assets/images/jeux_scene1.png" width="450">
+  <img src="../assets/images/jeux_scene2.png" width="450">
+  <img src="../assets/images/jeux_scene3.png" width="450">
 
 </p>
 
@@ -192,9 +192,9 @@ J’ai créé, avec mon équipe, un film qui représente la solitude et les trou
 
 <p>
 
-  <img src="medias/film_1.png" width="450">
-  <img src="medias/film_2.png" width="450">
-  <img src="medias/film_3.png" width="450">
+  <img src="../assets/images/film_1.png" width="450">
+  <img src="../assets/images/film_2.png" width="450">
+  <img src="../assets/images/film_3.png" width="450">
 
 </p>
 
@@ -239,9 +239,9 @@ J’ai créé une publicité Web sur le thème du Ramadan pour un restaurant mus
 **Documentation du projet :**
 
 <p>
-  <img src="medias/bannier_web_peti.png" width="450">
-  <img src="medias/instagrame.png" width="450">
-  <img src="medias/banniere_web.png" width="450">
+  <img src="../assets/images/bannier_web_peti.png" width="450">
+  <img src="../assets/images/instagrame.png" width="450">
+  <img src="../assets/images/banniere_web.png" width="450">
 </p>
 
 # Processus de création du projet
@@ -251,7 +251,7 @@ Pour commencer, j’ai créé un moodboard pour définir l’ambiance générale
 
 J’ai aussi commencé à réfléchir aux couleurs, aux styles, aux formes et aux typographies que je pourrais utiliser. Cette étape m’a aidé à avoir une première idée de la direction que je voulais prendre.
 
-![Planche d'inspiration](medias/plache_inspi.png)
+![Planche d'inspiration](../assets/images/planche_inspi.png)
 
 
 ## Étape 2 : Création de la planche d’inspiration
@@ -261,7 +261,7 @@ J’y ai ajouté les polices, les couleurs, le style graphique, le nom du restau
 
 Cette étape m’a permis de mieux définir le style final de ma publicité.
 
-![Planche de style](medias/planche_style.png)
+![Planche de style](../assets/images/planche_style.png)
 
 
 ## Étape 3 : Recherche de publicités similaires
@@ -272,8 +272,8 @@ J’ai observé comment les autres publicités utilisent les photos de nourritur
 Ces recherches m’ont donné des idées pour présenter mon offre de 50 % de rabais, tout en créant mon propre design.
 
 <p>
-  <img src="medias/pub2.png" width="250">
-  <img src="medias/pub1.png" width="250">
+  <img src="../assets/images/pub2.png" width="250">
+  <img src="../assets/images/pub1.png" width="250">
 </p>
 
 
@@ -285,7 +285,7 @@ J’ai commencé à placer les différents éléments comme la photo du plat, le
 J’ai ensuite utilisé ma créativité pour créer une composition qui correspondait à mon idée du projet.
 
 <p>
-  <img src="medias/instagrame.png" width="250">
+  <img src="../assets/images/instagrame.png" width="250">
 </p>
 
 
@@ -303,9 +303,11 @@ Une fois mon design principal terminé, je l’ai adapté aux trois formats dema
 
 J’ai gardé les mêmes couleurs, le même style et les mêmes éléments pour que les trois publicités restent cohérentes. J’ai cependant changé leur disposition pour qu’elles fonctionnent bien dans chaque format.
 
-  <img src="medias/bannier_web_peti.png" width="250">
-  <img src="medias/banniere_web.png" width="250">
-  <img src="medias/instagrame.png" width="250">
+<p>
+  <img src="../assets/images/bannier_web_peti.png" width="250">
+  <img src="../assets/images/banniere_web.png" width="250">
+  <img src="../assets/images/instagrame.png" width="250">
+</p>
 
 
 ## Étape 7 : Corrections avec les commentaires du professeur
@@ -324,8 +326,7 @@ Le résultat final est une campagne publicitaire sur le thème du Ramadan, avec 
 
 Ce projet est le résultat de mes recherches, de mes inspirations, de ma créativité et des conseils de mon professeur.
 <p>
-  <img src="medias/bannier_web_peti.png" width="250">
-  <img src="medias/banniere_web.png" width="250">
-  <img src="medias/instagrame.png" width="250">
+  <img src="../assets/images/bannier_web_peti.png" width="250">
+  <img src="../assets/images/banniere_web.png" width="250">
+  <img src="../assets/images/instagrame.png" width="250">
 </p>
-
