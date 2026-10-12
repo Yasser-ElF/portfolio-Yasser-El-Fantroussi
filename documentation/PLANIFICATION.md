@@ -97,9 +97,9 @@ J’ai créé une performance audiovisuelle qui évoque la thalassophobie, en me
 **Lien vers la documentation du projet :**[la chasse lien youtube](https://youtu.be/zx5qwowoRbc) 
 <p>
 
-  <img src="medias/difusion_1.png" width="450">
-  <img src="medias/difusion_2.png" width="450">
-  <img src="medias/difusion_3.png" width="450">
+  <img src="assets/images/difusion_1.png" width="450">
+  <img src="assets/images/difusion_2.png" width="450">
+  <img src="assets/images/difusion_3.png" width="450">
   <img src="medias/difusion_4.png" width="450">
 
 </p>
