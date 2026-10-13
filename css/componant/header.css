@@ -94,4 +94,20 @@
 @media (max-width: 900px){
   .navbar, .hero-bottom-row{ padding-inline:1.5rem; }
   .nav-links{ gap:1.2rem; }
+  .hero-corner-icon{ bottom:96px; }
+}
+@media (max-width:548px){
+   .nav-links li:nth-child(2),
+  .nav-links li:nth-child(4){ display:none; }   /* cache Projets et Contact */
+
+  .logo-mark_top{ width:56px; height:56px; }    /* logo plus petit pour laisser de la place aux liens */
+
+  .nav-links{     /* 2rem = le padding-haut de .navbar */
+    height:56px;                    /* même hauteur que le logo, pour l'alignement vertical */
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+    pointer-events:none;            /* le conteneur ne bloque pas le clic sur le logo */
+  }
+  .nav-links a{ pointer-events:auto; font-size:.7rem; }
 }
