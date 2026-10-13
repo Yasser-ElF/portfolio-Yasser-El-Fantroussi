@@ -1,4 +1,4 @@
-/* header.css — navbar + section hero + menu burger */
+/* header.css — navbar + section hero */
 
 /* ===================================================
    HERO
@@ -39,14 +39,9 @@
   padding: 2rem 4rem 0;
 }
 .logo-mark_top{ display:inline-flex; width:88px; height:88px; }
-/* Le logo remplit son conteneur (le lien du logo n'a plus la classe decor-icon) */
-.logo-mark_top img{ display:block; width:100%; height:100%; object-fit:contain; }
 .nav-links{ display:flex; gap:3rem; }
 .nav-links a{ color:#fff; font-size:.82rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
 .nav-links a:hover{ color:#aebcf0; }
-
-/* Le bouton burger est caché sur grand écran */
-.nav-toggle{ display:none; }
 
 /* Texte central */
 .hero-content{
@@ -99,116 +94,4 @@
 @media (max-width: 900px){
   .navbar, .hero-bottom-row{ padding-inline:1.5rem; }
   .nav-links{ gap:1.2rem; }
-}
-
-/* ===================================================
-   MENU BURGER (548px et moins)
-=================================================== */
-/* Sous 548px : les liens disparaissent et un bouton à 3 traits ouvre un menu plein écran.
-   Le menu reprend les couleurs du hero (marine + lueurs lavande et bleu) et l'or des étiquettes. */
-body.menu-open{ overflow:hidden; }   /* bloque le défilement de la page quand le menu est ouvert */
-
-@media (max-width: 548px){
-  .navbar{ padding: 1.25rem 1.5rem 0; }
-  .logo-mark_top{ position:relative; z-index:2; width:64px; height:64px; }
-
-  /* --- Bouton : 3 traits blancs --- */
-  .nav-toggle{
-    display:flex; flex-direction:column; justify-content:center; gap:6px;
-    position:relative; z-index:2;
-    width:46px; height:46px; padding:12px;
-    background: rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.4);
-    border-radius:3px;
-    backdrop-filter: blur(4px);
-    cursor:pointer;
-    transition: border-color .3s ease, background .3s ease;
-  }
-  .nav-toggle:hover{ background: rgba(255,255,255,.12); border-color:#fff; }
-  .nav-toggle:focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; }
-  .nav-toggle span{
-    display:block; height:2px; width:100%;
-    background:#fff;
-    transition: transform .35s ease, opacity .2s ease, background .3s ease;
-  }
-  .nav-toggle span:nth-child(2){ width:70%; margin-left:auto; }   /* le trait du milieu est plus court */
-
-  /* Ouvert : croix dorée */
-  .nav-toggle[aria-expanded="true"]{ border-color: var(--gold); }
-  .nav-toggle[aria-expanded="true"] span{ background: var(--gold); }
-  .nav-toggle[aria-expanded="true"] span:nth-child(1){ transform: translateY(8px) rotate(45deg); }
-  .nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
-  .nav-toggle[aria-expanded="true"] span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
-
-  /* --- Panneau plein écran (caché par défaut) --- */
-  .nav-links{
-    position:fixed; inset:0; z-index:1;
-    counter-reset: menu;
-    flex-direction:column; align-items:flex-start; justify-content:center;
-    gap:.5rem;
-    padding: 6rem 2rem 4rem;
-    background:
-      radial-gradient(circle 360px at 85% 12%, rgba(138,135,168,.35), transparent 70%),   /* lavande */
-      radial-gradient(circle 420px at 8% 90%,  rgba(30,127,196,.30),  transparent 70%),   /* bleu cyan */
-      radial-gradient(circle 500px at 50% 50%, rgba(30,70,160,.35),   transparent 70%),
-      var(--hero-bg);
-    opacity:0; visibility:hidden;
-    transition: opacity .35s ease, visibility 0s linear .35s;
-  }
-  .nav-links.is-open{
-    opacity:1; visibility:visible;
-    transition: opacity .35s ease, visibility 0s;
-  }
-
-  /* Petite étiquette « Menu » au-dessus des liens (même style que les .eyebrow) */
-  .nav-links::before{
-    content:"Menu";
-    margin-bottom:1.5rem;
-    color: var(--cyan);
-    font-size:.7rem; font-weight:700; letter-spacing:.26em; text-transform:uppercase;
-  }
-
-  /* Chaque lien : numéro en or + titre en Playfair Display + ligne fine dessous */
-  .nav-links li{
-    width:100%;
-    border-bottom:1px solid rgba(255,255,255,.12);
-    opacity:0; transform: translateY(18px);
-    transition: opacity .5s ease, transform .5s cubic-bezier(.22,1,.36,1);
-  }
-  .nav-links a{
-    display:flex; align-items:baseline; gap:1rem;
-    padding:1rem 0;
-    font-family: var(--font-serif);
-    font-size:2rem; font-weight:700;
-    letter-spacing:-.01em; text-transform:none;
-    color:#fff;
-  }
-  .nav-links a::before{
-    counter-increment: menu;
-    content: "0" counter(menu);
-    font-family: var(--font-body);
-    font-size:.7rem; font-weight:700; letter-spacing:.15em;
-    color: var(--gold);
-  }
-  .nav-links a:hover,
-  .nav-links a:focus-visible{ color: var(--gold); }
-
-  /* Les liens apparaissent l'un après l'autre à l'ouverture */
-  .nav-links.is-open li{ opacity:1; transform:none; }
-  .nav-links.is-open li:nth-child(1){ transition-delay:.10s; }
-  .nav-links.is-open li:nth-child(2){ transition-delay:.18s; }
-  .nav-links.is-open li:nth-child(3){ transition-delay:.26s; }
-  .nav-links.is-open li:nth-child(4){ transition-delay:.34s; }
-
-  /* Localisation en bas du menu (comme dans le hero) */
-  .nav-links::after{
-    content:"Montréal, QC";
-    position:absolute; left:2rem; bottom:2rem;
-    color: rgba(255,255,255,.4);
-    font-size:.62rem; letter-spacing:.2em; text-transform:uppercase;
-  }
-}
-
-@media (prefers-reduced-motion: reduce){
-  .nav-links, .nav-links li, .nav-toggle span{ transition:none !important; }
 }
