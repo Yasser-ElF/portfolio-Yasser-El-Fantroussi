@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Polices Google : Cinzel (titre YASSER), Playfair Display (titres), Plus Jakarta Sans (texte). -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<!-- Mes 3 fichiers CSS (l'ordre compte : en cas d'égalité, le dernier gagne). -->
+<!-- Mes fichiers CSS (l'ordre compte : en cas d'égalité, le dernier gagne). -->
 <link rel="stylesheet" href="css/componant/header.css">
 <link rel="stylesheet" href="css/componant/projet.css">
 <link rel="stylesheet" href="css/componant/style.css">
@@ -31,16 +31,22 @@
   </div>
 
   <nav class="navbar">
-    <a href="#" class="logo-mark_top " aria-label="Yasser El Fantroussi">
+    <a href="#" class="logo-mark_top" aria-label="Yasser El Fantroussi">
       <img src="assets/images/yasser_logo.png" alt="Yasser El Fantroussi">
     </a>
+
     <!-- Les href=« #about », « #projets »… sont des ancres : le clic défile jusqu'à l'élément qui a cet id. -->
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#about">À propos</a></li>
       <li><a href="#projets">Projets</a></li>
       <li><a href="#competences">Compétences</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <!-- Bouton burger : visible seulement à 548px et moins (voir header.css). -->
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <div class="hero-content">
@@ -198,7 +204,7 @@
 </section>
 
 <!-- ============ CONTACT CTA ============ -->
-<!-- Bande de contact : « mailto: » ouvre le logiciel de courriel (à remplacer par ta vraie adresse). -->
+<!-- Bande de contact : « mailto: » ouvre le logiciel de courriel. -->
 <section class="contact" id="contact">
   <div class="contact-icon decor-icon" aria-hidden="true">
     <img src="assets/images/star.png" alt="">
@@ -226,5 +232,6 @@
 <script src="js/ticker.js"></script>
 <script src="js/main.js"></script>
 <script src="js/animation.js"></script>
+<script src="js/nav.js"></script>
 </body>
 </html>
