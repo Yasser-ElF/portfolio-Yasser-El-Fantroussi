@@ -28,8 +28,6 @@ function revealAll(selector, type = "up", stagger = 0.12) {
 }
 
 function setupScrollAnimations() {
-  // Ticker
-  revealAll(".ticker", "up", 0);
 
   // À propos
   revealAll(".about-portrait-wrap", "left", 0);
