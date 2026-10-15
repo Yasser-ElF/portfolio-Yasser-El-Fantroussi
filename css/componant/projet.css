@@ -19,8 +19,6 @@
   overflow:hidden;
   box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
 }
-/* Couche d'arrière-plan qui porte les lueurs colorées du thème (pointer-events:none : elle ne bloque pas les clics). */
-.project-glow{ position:absolute; inset:0; pointer-events:none; }
 .project-body{
   position:relative;
   max-width:768px;
@@ -47,14 +45,15 @@
   margin-bottom:.6rem;
 }
 .project-desc{ color:#e5e7eb; font-size:1rem; line-height:1.6; max-width:60ch; }
-.project-tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem; }
+
+/* Outils utilisés : simple ligne de texte séparée par des points (pas de pastilles qui ressemblent à des boutons) */
+.project-tags{ display:flex; flex-wrap:wrap; gap:.25rem .75rem; margin-top:1rem; }
 .project-tags span{
-  background: rgba(0,0,0,.4);
-  border:1px solid rgba(255,255,255,.2);
-  padding:.3rem .7rem;
-  font-size:.65rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase;
-  color:#e5e7eb;
+  font-size:.72rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase;
+  color:#cbd5e1;
 }
+.project-tags span + span::before{ content:"·"; margin-right:.75rem; opacity:.6; }
+
 .project-cta{
   display:inline-flex; align-items:center; gap:.5rem;
   background:#fff; color: var(--ink);
@@ -66,33 +65,21 @@
   margin-top:1rem;
 }
 .project-cta:hover{ background:#f1f1f1; }
-.cta-icon{ width:16px; height:16px; padding:0; font-size:.6rem; }
+/* La petite flèche ▸ : sans cadre pointillé (on écrase le style de .icon-placeholder) */
+.project-cta .cta-icon{
+  border:none; background:none; color:inherit;
+  width:auto; height:auto; padding:0; font-size:.8rem;
+}
 
 /* Themes 1 à 4 : appliquées via JS (theme-${n}) sur chaque .project-card,
-   réutilisées en boucle si tu as plus de 4 projets dans le JSON. */
-.theme-1{ background: linear-gradient(135deg, rgba(8,18,38,.88) 0%, rgba(12,30,60,.75) 100%); }
-.theme-1 .project-glow{ background:
-  radial-gradient(ellipse 200px 200px at 80% 20%, rgba(138,135,168,.45), transparent),
-  radial-gradient(ellipse 220px 220px at 10% 80%, rgba(30,127,196,.40), transparent); }
-.theme-1 .project-body{ background: linear-gradient(90deg, rgba(5,12,27,.95) 0%, rgba(8,23,48,.85) 50%, rgba(8,23,48,0) 100%); }
-
-.theme-2{ background: linear-gradient(135deg, rgba(14,18,30,.9) 0%, rgba(28,36,60,.78) 100%); }
-.theme-2 .project-glow{ background:
-  radial-gradient(ellipse 200px 200px at 85% 75%, rgba(138,112,120,.45), transparent),
-  radial-gradient(ellipse 220px 220px at 20% 30%, rgba(59,130,246,.35), transparent); }
-.theme-2 .project-body{ background: linear-gradient(90deg, rgba(7,11,22,.95) 0%, rgba(13,22,42,.85) 50%, rgba(13,22,42,0) 100%); }
-
-.theme-3{ background: linear-gradient(135deg, rgba(10,15,28,.9) 0%, rgba(20,25,42,.8) 100%); }
-.theme-3 .project-glow{ background:
-  radial-gradient(ellipse 200px 200px at 75% 35%, rgba(158,174,232,.38), transparent),
-  radial-gradient(ellipse 220px 220px at 25% 60%, rgba(30,58,138,.5), transparent); }
-.theme-3 .project-body{ background: linear-gradient(90deg, rgba(6,10,22,.95) 0%, rgba(11,20,38,.85) 50%, rgba(11,20,38,0) 100%); }
-
-.theme-4{ background: linear-gradient(135deg, rgba(12,16,32,.9) 0%, rgba(22,28,48,.8) 100%); }
-.theme-4 .project-glow{ background:
-  radial-gradient(ellipse 200px 200px at 80% 50%, rgba(168,148,190,.40), transparent),
-  radial-gradient(ellipse 220px 220px at 15% 40%, rgba(59,130,246,.4), transparent); }
-.theme-4 .project-body{ background: linear-gradient(90deg, rgba(6,10,24,.95) 0%, rgba(12,22,44,.85) 50%, rgba(12,22,44,0) 100%); }
+   réutilisées en boucle si tu as plus de 4 projets dans le JSON.
+   Le fond est OPAQUE et porté uniquement par la carte : la partie visible
+   (.project-body) et la zone « Voir plus » (.project-details) n'ont aucun fond
+   à elles, donc elles montrent exactement la même couleur. */
+.theme-1{ background: linear-gradient(135deg, #081226 0%, #0c1e3c 100%); }
+.theme-2{ background: linear-gradient(135deg, #0e121e 0%, #1c243c 100%); }
+.theme-3{ background: linear-gradient(135deg, #0a0f1c 0%, #14192a 100%); }
+.theme-4{ background: linear-gradient(135deg, #0c1020 0%, #161c30 100%); }
 
 /* ===================================================
    PROJETS — "VOIR PLUS" (carte qui s'agrandit)
