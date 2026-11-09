@@ -34,7 +34,7 @@
     "desc": "Jeu de plateforme interactif 2D au style cartoon inspiré des classiques rétro. Le joueur navigue à travers trois niveaux dynamiques en récoltant des fruits et en évitant scies et pics avec gestion de vies et mécaniques de saut précises. Échantillons sonores et animations réactives.",
     "tags": ["Godot Engine", "Godot Script", "VS Code", "GitHub", "Game Audio 2D"],
     "ctaLabel": "GitHub TP4_Yasser",
-    "ctaHref": "https://yasser-elf.github.io/TP4_Yasser/",
+    "ctaHref": "https://github.com/Yasser-ElF/TP4_Yasser",
     "details": {
       "dates": "11/28/2025",
       "brief": "Réaliser une expérience ludique et interactive comprenant des images et des échantillons sonores, dans laquelle l'interacteur progresse en accomplissant différentes actions.",
@@ -44,7 +44,7 @@
         "assets/videos/2d_gif3.mp4"
       ],
       "link": "https://yasser-elf.github.io/TP4_Yasser/",
-      "linkLabel": "Voir le projet"
+      "linkLabel": "Voir le projet Godot"
     }
   },
   {
